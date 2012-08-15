@@ -104,6 +104,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: justify;
 }
 
+#content .main {
+    font-size: x-large;
+}
+
 #content h1.title {
     display: inline;
     margin-right: 8px;
