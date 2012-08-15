@@ -1,0 +1,181 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #F7F7F7;
+}
+
+#wrap {
+    margin: 0 auto;
+    width: 800px;
+}
+
+#footer {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 4px solid #EEE;
+    text-align: right;
+    font: 13.34px helvetica, arial, clean, sans-serif;
+    clear: both;
+    color: #AAA;
+}
+
+#footer a {
+    color: #1240AB;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: black;
+}
+
+#footer .contact {
+    float: right;
+    margin-left: 3em;
+    line-height: 0.5;
+}
+
+#footer .rss {
+    float: left;
+}
+
+#content {
+    line-height: 1.5;
+}
+
+#header {
+    margin-bottom: 2em;
+    position: relative;
+    border-bottom: 1px solid #AAA;
+}
+
+#header .title {
+    font-size: larger;
+    display: inline;
+    font-weight: bold;
+}
+
+#header ul {
+    overflow: hidden;
+    list-style: none;
+    display: inline;
+    padding-left: 0;
+    margin-bottom: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#header a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #AAA;
+}
+
+#header a.title {
+    color: #1240AB;
+    text-decoration: none;
+}
+
+#header a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+#header ul li {
+    list-style: none;
+    margin-left: 1em;
+    display: inline;
+    font-size: larger;
+}
+
+a {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kreon'
+}
+
+#content {
+    text-align: justify;
+}
+
+#content h1.title {
+    display: inline;
+    margin-right: 8px;
+}
+
+#content h1.meta {
+    display: inline;
+    color: #CCC;
+    margin-right: 8px;
+}
+
+#content a {
+    color: #1240AB;
+}
+
+#content a.permalink {
+    text-decoration: none;
+    font-size: x-large;
+    color: #1240AB;
+}
+
+#content a:hover {
+    color: black;
+}
+
+#content .highlight {
+    background-color: #F0F0F0;
+    border: 1px solid #DDD;
+    padding: 2px 18px;
+    overflow: auto;
+}
+
+#content blockquote {
+    border-left: 10px solid #AAA;
+    padding-left: 18px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#content img[alt=center] {
+    display: block;
+    margin: auto;
+}
+
+#content img[alt=right] {
+    display: block;
+    margin-left: auto;
+}
+
+ul.posts {
+    font-family: 'Kreon';
+    line-height: 2.0;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    font-size: larger;
+}
+
+ul.posts a {
+    text-decoration: none;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+.posts .meta {
+    color: #AAA;
+    font-family: 'Inconsolata';
+    margin-right: 0.5em;
+}
+
+#content pre {
+    font-family: 'Inconsolata';
+}

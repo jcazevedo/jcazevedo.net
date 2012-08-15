@@ -1,0 +1,16 @@
+---
+layout: main
+title: Home
+---
+
+<h1>Heading 1</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis enim id purus iaculis convallis. Donec laoreet nisl vel turpis laoreet convallis ac quis ante. Nullam gravida odio a urna aliquam pulvinar. Integer vitae risus odio, non interdum tellus. Aenean sollicitudin dictum feugiat. Proin mollis nisl sed velit interdum ultricies. Duis ultrices justo ligula. Curabitur felis lectus, porta non congue in, accumsan non arcu. In ac mauris odio, eu scelerisque massa. Integer ac mauris quam. Nunc commodo pellentesque risus, eget consectetur ante facilisis at. Donec vestibulum egestas lobortis. Nulla imperdiet imperdiet iaculis. Duis congue vulputate velit ullamcorper ultrices. Morbi eu varius nisi. Duis tortor ante, varius id sollicitudin ut, gravida ut nulla.</p>
+
+<h1>Latest blog posts</h1>
+
+<ul class="posts">
+{% for post in site.posts limit: 5 %}
+<li><span class="meta">{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
