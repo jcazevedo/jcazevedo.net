@@ -6,15 +6,14 @@ title: Home
 <h1>Hi! I'm Joao Azevedo.</h1>
 
 <ul>
-  <li><a href="/about">About Me</a></li>
-  <li><a href="/blog">Blog</a></li>
-  <li><a href="/projects">Projects</a></li>
+  <li>Software Engineer at <a href="http://www.shiftforward.eu/">ShiftForward</a>.</li>
+  <li><a href="https://github.com/jcazevedo">Programmer</a>, <a href="http://www.goodreads.com/jcazevedo">reader</a>, <a href="http://www.last.fm/user/jcazevedo">music listener</a> and <a href="http://www.flickr.com/photos/jcazevedo">amateur photographer</a>.</li>
 </ul>
 
-<h2>Latest blog posts</h2>
+<h1>Latest blog posts</h1>
 
-<ul class="posts">
+<dl class="posts dl-horizontal">
 {% for post in site.posts limit: 5 %}
-<li><span class="meta">{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+<dt class="date">{{ post.date | date_to_string }}</dt> <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
 {% endfor %}
-</ul>
+</dl>

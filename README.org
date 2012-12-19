@@ -1,5 +1,0 @@
-* This is the data that powers [[http://jcazevedo.net/]]
-It is automatically transformed using [[https://github.com/mojombo/jekyll/][Jekyll]].
-
-* License
-Everything under the ~_posts/~ directory is Copyright Joao Azevedo, and may not be reused without my permission. Everything else is MIT licensed.

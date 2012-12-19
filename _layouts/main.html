@@ -1,21 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>jcazevedo.net | {{ page.title }}</title>
     {% include meta.html %}
   </head>
   <body>
-    <div id="wrap">
-      <div id="header">
-        {% include header.html %}
+    <div class="container">
+      <div class="sidebar">
+        {% include sidebar.html %}
       </div>
-      <div id="content">
-        {{ content }}
-      </div>
-      <div id="footer">
-        {% include footer.html %}
+
+      <div class="content">
+        <div class="row-fluid">
+          {{ content }}
+        </div>
       </div>
     </div>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap-transition.js"></script>
+    <script src="/js/bootstrap-alert.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+    <script src="/js/bootstrap-dropdown.js"></script>
+    <script src="/js/bootstrap-scrollspy.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
+    <script src="/js/bootstrap-tooltip.js"></script>
+    <script src="/js/bootstrap-popover.js"></script>
+    <script src="/js/bootstrap-button.js"></script>
+    <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+    <script src="/js/bootstrap-typeahead.js"></script>
+    <script src="/js/bootstrap-affix.js"></script>
   </body>
 </html>

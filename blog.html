@@ -5,8 +5,8 @@ title: Blog
 
 <h1>Blog</h1>
 
-<ul class="posts">
+<dl class="dl-horizontal">
 {% for post in site.posts %}
-<li><span class="meta">{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+<dt class="date">{{ post.date | date_to_string }}</dt> <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
 {% endfor %}
-</ul>
+</dl>
