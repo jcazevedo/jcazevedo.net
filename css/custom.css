@@ -2,6 +2,10 @@
  * Custom CSS for jcazevedo.net
  */
 
+body {
+  overflow-y: scroll;
+}
+
 .sidebar {
   background-color: #fff;
   text-align: right;
