@@ -163,3 +163,7 @@ body {
   font-family: 'Inconsolata', Monaco, 'Courier', 'Courier New', monospace;
   margin-right: 8px;
 }
+
+.content p, ul, ol, blockquote, div.highlight {
+  margin-bottom: 1.5em;
+}
