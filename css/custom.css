@@ -167,3 +167,12 @@ body {
 .content p, ul, ol, blockquote, div.highlight {
   margin-bottom: 1.5em;
 }
+
+.content a[rel="footnote"] {
+  margin: 0px 2px;
+  color: #CCC;
+}
+
+.content .footnotes p {
+  display: inline;
+}
