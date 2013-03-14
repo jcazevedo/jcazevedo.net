@@ -62,7 +62,7 @@ body {
 }
 
 .content {
-  color: #444;
+  color: #333;
   background-color: white;
   min-width: 350px;
   position: relative;
@@ -88,7 +88,7 @@ body {
 .content a {
   text-decoration: none;
   border-bottom: solid 2px #CCC;
-  color: black;
+  color: #222;
 }
 
 .content a:hover {
