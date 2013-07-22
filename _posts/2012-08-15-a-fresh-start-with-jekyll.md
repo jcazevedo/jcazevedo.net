@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A fresh start with Jekyll"
-date: 2012-08-15 02:29:07
+date: 2012-08-15
 ---
 
 I've been meaning to do a revamp of my old site, and took that as a chance to try [Jekyll](https://github.com/mojombo/jekyll/). The decisions to use Jekyll over [Wordpress](http://wordpress.org/), which I've been relying upon over the past 3 years, revolve around the following:
