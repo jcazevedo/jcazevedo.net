@@ -1,7 +1,5 @@
 /*
  * Body resets
- *
- * Update the foundational and global aspects of the page.
  */
 
 * {
@@ -41,7 +39,10 @@ body {
       -ms-text-size-adjust: 100%;
 }
 
-/* No `:visited` state is required by default (browsers will use `a`) */
+/*
+ * Link options
+ */
+
 a {
   color: #268bd2;
   text-decoration: none;
@@ -51,13 +52,15 @@ a strong {
   color: inherit;
 }
 
-/* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
   text-decoration: underline;
 }
 
-/* Headings */
+/*
+ * Headings
+ */
+
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
@@ -85,7 +88,10 @@ h4, h5, h6 {
   font-size: 1rem;
 }
 
-/* Body text */
+/*
+ * Body text
+ */
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -95,7 +101,10 @@ strong {
   color: #303030;
 }
 
-/* Lists */
+/*
+ * Lists
+ */
+
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -109,7 +118,10 @@ dd {
   margin-bottom: .5rem;
 }
 
-/* Misc */
+/*
+ * Miscellaneous
+ */
+
 hr {
   position: relative;
   margin: 1.5rem 0;
@@ -130,7 +142,10 @@ abbr[title] {
   border-bottom: 1px dotted #e5e5e5;
 }
 
-/* Code */
+/*
+ * Code
+ */
+
 code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
@@ -165,7 +180,10 @@ pre code {
   background-color: transparent;
 }
 
-/* Pygments via Jekyll */
+/*
+ * Pygments via Jekyll
+ */
+
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
@@ -175,7 +193,10 @@ pre code {
   margin-bottom: 0;
 }
 
-/* Quotes */
+/*
+ * Quotes
+ */
+
 blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
@@ -201,7 +222,10 @@ img {
   border-radius: 5px;
 }
 
-/* Tables */
+/*
+ * Tables
+ */
+
 table {
   margin-bottom: 1rem;
   width: 100%;
@@ -222,8 +246,6 @@ tbody tr:nth-child(odd) th {
 
 /*
  * Container
- *
- * Center the page content.
  */
 
 .container {
@@ -236,8 +258,6 @@ tbody tr:nth-child(odd) th {
 
 /*
  * Masthead
- *
- * Super small header above the content for site name and short description.
  */
 
 .masthead {
@@ -265,9 +285,6 @@ tbody tr:nth-child(odd) th {
 
 /*
  * Posts and pages
- *
- * Each post is wrapped in `.post` and is used on default and post layouts. Each
- * page is wrapped in `.page` and is only used on the page layout.
  */
 
 .page,
@@ -275,7 +292,6 @@ tbody tr:nth-child(odd) th {
   margin-bottom: 4em;
 }
 
-/* Blog post or page title */
 .page-title,
 .post-title,
 .post-title a {
@@ -287,7 +303,6 @@ tbody tr:nth-child(odd) th {
   margin-top: 0;
 }
 
-/* Meta data line below post title */
 .post-date {
   display: block;
   margin-top: -.5rem;
@@ -295,7 +310,6 @@ tbody tr:nth-child(odd) th {
   color: #9a9a9a;
 }
 
-/* post lists */
 .posts li small {
   font-size: 75%;
   color: #999;
@@ -303,9 +317,6 @@ tbody tr:nth-child(odd) th {
 
 /*
  * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
  */
 
 .pagination {
@@ -316,7 +327,6 @@ tbody tr:nth-child(odd) th {
   text-align: center;
 }
 
-/* Pagination items can be `span`s or `a`s */
 .pagination-item {
   display: block;
   padding: 1rem;
@@ -326,7 +336,6 @@ tbody tr:nth-child(odd) th {
   margin-bottom: -1px;
 }
 
-/* Only provide a hover state for linked pagination items */
 a.pagination-item:hover {
   background-color: #f5f5f5;
 }
