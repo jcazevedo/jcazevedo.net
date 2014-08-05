@@ -5,17 +5,16 @@
     {% include meta.html %}
   </head>
   <body>
-    <div class="container">
-      <div class="sidebar">
-        {% include sidebar.html %}
-      </div>
+    <div class="content container">
+      {% include header.html %}
 
-      <div class="content">
-        <div class="row-fluid">
-          <h1 class="title">{{ page.title }} <div class="meta">{{ page.date | date_to_string }}</div> <a class="permalink" href="{{ post.url }}">&infin;</a></h1>
-          {{ content }}
-          <div id="disqus_thread"></div>
-          <script type="text/javascript">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <span class="post-date">{{ page.date | date_to_string }}</span>
+
+      {{ content }}
+
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'jcazevedonet'; // required: replace example with your forum shortname
 
@@ -25,26 +24,9 @@
             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        </div>
-      </div>
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
-
-    <script src="/js/jquery.js"></script>
-    <script src="/js/bootstrap-transition.js"></script>
-    <script src="/js/bootstrap-alert.js"></script>
-    <script src="/js/bootstrap-modal.js"></script>
-    <script src="/js/bootstrap-dropdown.js"></script>
-    <script src="/js/bootstrap-scrollspy.js"></script>
-    <script src="/js/bootstrap-tab.js"></script>
-    <script src="/js/bootstrap-tooltip.js"></script>
-    <script src="/js/bootstrap-popover.js"></script>
-    <script src="/js/bootstrap-button.js"></script>
-    <script src="/js/bootstrap-collapse.js"></script>
-    <script src="/js/bootstrap-carousel.js"></script>
-    <script src="/js/bootstrap-typeahead.js"></script>
-    <script src="/js/bootstrap-affix.js"></script>
   </body>
 </html>
