@@ -1,8 +1,15 @@
-# This is the data that powers [http://jcazevedo.net/][1]
-It is automatically transformed using [Jekyll][2].
+# My personal website
 
-# License
-Everything under the ~_posts/~ directory is Copyright Joao Azevedo, and may not be reused without my permission. Everything else is MIT licensed.
+This is the data that powers [http://jcazevedo.net/][site]. It is automatically
+transformed into a static website using [Jekyll][jekyll].
 
-[1]: http://jcazevedo.net/
-[2]: https://github.com/mojombo/jekyll/
+## License
+
+Everything under the `blog/_posts/` directory is Copyright (c) Joao Azevedo, and
+may not be reused without my permission. The CSS is heavily reused from
+[Hyde][hyde], which is open source under the MIT license. Everything else is MIT
+licensed.
+
+[site]: http://jcazevedo.net/
+[jekyll]: http://github.com/mojombo/jekyll/
+[hyde]: http://github.com/poole/hyde
