@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A fresh start with Jekyll"
+title: "A Fresh Start with Jekyll"
 date: 2012-08-15
 ---
 
