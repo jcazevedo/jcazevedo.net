@@ -35,7 +35,7 @@ from Rateyourmusic and assign it to albums and items in the beets library:
 [beets-rymgenre][beets-rymgenre]. Rateyourmusic doesn't provide a webservice or
 API for developers to build upon[^1] so it's necessary to scrape for the desired
 information. Beets is written in Python, and so are its plugins. I have little
-experience with it and no familiarity with its ecossystem. I ended up using
+experience with it and no familiarity with its ecosystem. I ended up using
 [lxml][lxml] for scraping and [requests][requests] for the HTTP client, but more
 lightweight solutions may exist.
 
