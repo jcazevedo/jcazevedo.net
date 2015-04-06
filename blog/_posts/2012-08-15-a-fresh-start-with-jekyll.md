@@ -28,7 +28,7 @@ in my system, I just needed to install the gem, setup the initial project
 structure as described in its [wiki][5] and start working on the site design and
 initial structure. Since Jekyll supports direct regeneration, I don't need to
 restart the local server to see my changes in the browser. To support syntax
-highlighting, I installed [Pygments][6] (which is the same software Github uses
+highlighting, I installed [Pygments][6] (which is the same software GitHub uses
 for syntax highlighting) and had it generate its css.
 
 I wanted to keep the site design as simple as possible. Lacking proper design
