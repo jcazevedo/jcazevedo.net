@@ -17,7 +17,7 @@ keep as much of the code I write [open-source][5]. I also take [photos][6].
 
 In case you're interested, you can grab my [CV][7]. You can contact me through
 [email][8], [twitter][9] or [IRC][10]. I usually lurk in the [freenode][11]
-network under the 'jcazevedo' handle.
+network under the `jcazevedo` handle.
 
 [1]: http://www.shiftforward.eu/
 [2]: http://www.goodreads.com/jcazevedo
