@@ -9,11 +9,17 @@ title: Blog
     {% for post in site.posts %}
     {% unless post.next %}
     <h2>{{ post.date | date: '%Y' }}</h2>
+    <h3>{{ post.date | date: '%B' }}</h3>
     {% else %}
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+    {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
+    {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
     {% if year != nyear %}
     <h2>{{ post.date | date: '%Y' }}</h2>
+    <h3>{{ post.date | date: '%B' }}</h3>
+    {% elsif month != nmonth %}
+    <h3>{{ post.date | date: '%B' }}</h3>
     {% endif %}
     {% endunless %}
 
