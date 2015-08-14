@@ -7,18 +7,18 @@ title: Projects
 
 The following is a list of projects I have worked on or am currently working on.
 
-MoultingYAML (2015 - )
+MoultingYAML
 : MoultingYAML is a Scala wrapper for
 [SnakeYAML][snakeyaml], providing a simple immutable model of the YAML language,
 built on top of SnakeYAML models, as well as type-class based (de)serialization
 of custom objects. It's available on [GitHub][moultingyaml].
 
-beets-rymgenre (2014 - )
+beets-rymgenre
 : beets-rymgenre is a plugin for [beets][beets] to fetch genre information from
 [rateyourmusic.com][rym]. It's written in Python, using lxml and requests. It's
 available on [GitHub][beets-rymgenre].
 
-mucuchies (2013 - )
+mucuchies
 : mucuchies is the engine behind [ShiftForward][sf]'s internal dashboard. It
 borrows the style from [Dashing][dashing] but is implemented using
 [Ember.js][emberjs], requiring only a browser with JavaScript capabilities to
