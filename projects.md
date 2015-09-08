@@ -18,8 +18,8 @@ beets-rymgenre
 [rateyourmusic.com][rym]. It's written in Python, using lxml and requests. It's
 available on [GitHub][beets-rymgenre].
 
-mucuchies
-: mucuchies is the engine behind [ShiftForward][sf]'s internal dashboard. It
+Mucuchies
+: Mucuchies is the engine behind [ShiftForward][sf]'s internal dashboard. It
 borrows the style from [Dashing][dashing] but is implemented using
 [Ember.js][emberjs], requiring only a browser with JavaScript capabilities to
 run. It's available on [GitHub][mucuchies].
