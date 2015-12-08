@@ -392,7 +392,12 @@ a.pagination-item:hover {
 
   .pagination-item {
     float: left;
-    width: 50%;
+    width: 33%;
+  }
+
+  .pagination-item.archive {
+    float: left;
+    width: 34%;
   }
 
   .pagination-item:first-child {

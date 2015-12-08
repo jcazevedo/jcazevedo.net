@@ -14,18 +14,19 @@ title: Blog
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="/blog/{{paginator.next_page}}">&laquo; Older</a>
+  <a class="pagination-item older" href="/blog/{{paginator.next_page}}">&laquo; Older</a>
   {% else %}
-    <span class="pagination-item older">&laquo; Older</span>
+  <span class="pagination-item older">&laquo; Older</span>
   {% endif %}
+  <a class="pagination-item archive" href="/blog/archive">Archive</a>
   {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/blog">Newer &raquo;</a>
-    {% else %}
-      <a class="pagination-item newer" href="/blog/{{paginator.previous_page}}">Newer &raquo;</a>
-    {% endif %}
+  {% if paginator.page == 2 %}
+  <a class="pagination-item newer" href="/blog">Newer &raquo;</a>
   {% else %}
-    <span class="pagination-item newer">Newer &raquo;</span>
+  <a class="pagination-item newer" href="/blog/{{paginator.previous_page}}">Newer &raquo;</a>
+  {% endif %}
+  {% else %}
+  <span class="pagination-item newer">Newer &raquo;</span>
   {% endif %}
 </div>
 
