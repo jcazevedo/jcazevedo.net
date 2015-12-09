@@ -250,6 +250,11 @@ img {
   border-radius: 5px;
 }
 
+img.center-image {
+  margin: 0 auto;
+  display: block;
+}
+
 /*
  * Tables
  */
