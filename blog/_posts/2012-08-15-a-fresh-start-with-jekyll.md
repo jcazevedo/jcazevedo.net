@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Fresh Start with Jekyll"
-date: 2012-08-15
+date: "Wed Aug  15 22:15:10 WET 2012"
 ---
 
 I've been meaning to do a revamp of my old site, and took that as a chance to

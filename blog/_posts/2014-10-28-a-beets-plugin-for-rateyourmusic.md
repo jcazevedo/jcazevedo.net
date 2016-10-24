@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Beets Plugin for Rateyourmusic"
-date: 2014-10-28
+date: "Tue Oct  28 20:41:33 WET 2014"
 ---
 
 Genres are usually neglected in my music library metadata. My primary source for
