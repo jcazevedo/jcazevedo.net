@@ -1,14 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>jcazevedo.net | {{ page.title }}</title>
-    {% include meta.html %}
-  </head>
-  <body>
-    <div class="content container">
-      {% include header.html %}
+    <head>
+        <title>jcazevedo.net | {{ page.title }}</title>
+        {% include meta.html %}
+    </head>
+    <body>
+        <div class="content container">
+            <div class="header">
+                {% include header.html %}
+            </div>
 
-      {{ content }}
-    </div>
-  </body>
+            <div class="body">
+                {{ content }}
+            </div>
+
+            <div class="footer">
+                {% include footer.html %}
+            </div>
+        </div>
+    </body>
 </html>
