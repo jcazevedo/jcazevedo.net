@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'jekyll' , '>= 2.5.3'
+gem 'jekyll' , '>= 3.5.0'
 gem 'jekyll-paginate' , '>= 1.1.0'
-gem 'pygments.rb', '>= 0.6.3'
+gem 'pygments.rb', '>= 1.1.2'
