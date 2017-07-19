@@ -2,6 +2,6 @@ highlighter: pygments
 markdown: kramdown
 permalink: pretty
 paginate: 5
-paginate_path: "blog/:num"
+paginate_path: "posts/:num"
 excerpt_separator: ""
 plugins: [jekyll-paginate]
