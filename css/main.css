@@ -407,6 +407,10 @@ a.pagination-item:hover {
   text-align: center;
 }
 
+.footer .links {
+  color: #c0c0c0;
+}
+
 @media (min-width: 30em) {
   .pagination {
     margin: 3rem 0 0 0;
