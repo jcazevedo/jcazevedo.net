@@ -6,7 +6,7 @@ title: Posts
 {% for post in paginator.posts %}
 <div class="post">
   <h1 class="post-title">{{ post.title }}</h1>
-  <span class="post-extra-header">{{ post.date | date: "%a, %d %b %Y %H:%M" }} <a href="{{ post.url }}">&#x221e;</a></span>
+  <span class="post-extra-header">{{ post.date | date: "%Y-%m-%d %H:%M" }} <a href="{{ post.url }}">&#x221e;</a></span>
 
   {{ post.content }}
 </div>
