@@ -87,6 +87,20 @@ a:focus {
 }
 
 /*
+ * Figures
+ */
+
+figure {
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+figure figcaption {
+  text-align: center;
+  font-size: 80%;
+}
+
+/*
  * Headings
  */
 
@@ -249,7 +263,6 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
   border-radius: 5px;
 }
 

@@ -12,9 +12,11 @@ part is usually a simple variation of the first one. You only have to submit the
 output to the provided puzzles, so it's possible to do things by hand, albeit
 unlikely. The puzzles so far have been simple, either by definition, or by
 having small input sizes, thus not requiring efficient algorithms to be solved.
-The tree lights up as you go along, giving it a nice effect:
+The tree lights up as you go along, giving it a nice effect.
 
-![Advent of Code tree]({{ site.url }}/img/adventofcodetree.png){: .center-image }
+{% include image.html 
+           url="{{site.url}}/img/adventofcodetree.png" 
+           description="Advent of Code tree with 9 levels lit up" %}
 
 I've decided to solve them all in Scala. Initially I started in C++, but in
 [day 4][day4]'s puzzle it was required to find MD5 hashes and I decided to
