@@ -18,7 +18,7 @@ time they're accessed.
 > lifetime of the volume is acceptable. Performance is restored after the data
 > is accessed once.
 > 
-> -- <cite>[Initializing Amazon EBS Volumes](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html)</cite>
+> &mdash; <cite>[Initializing Amazon EBS Volumes](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html)</cite>
 
 This can be particularly painful when restoring Amazon RDS DB snapshots, as the
 performance can be severely impacted. In order to overcome the first touch

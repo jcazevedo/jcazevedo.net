@@ -45,7 +45,8 @@ library metadata is that now I can ask beets for random albums of a given genre
 (or set of genres, for that matter) whenever I'm not sure what to listen to
 next.
 
-[^1]: There's actually an [open ticket][api-ticket] to build a webservice / API for Rateyourmusic open since 2009!
+[^1]: There's actually an [open ticket][api-ticket] to build a webservice / API
+    for Rateyourmusic open since 2009!
 
 [api-ticket]: http://rateyourmusic.com/rymzilla/view?id=683
 [beets]: http://beets.radbox.org/
