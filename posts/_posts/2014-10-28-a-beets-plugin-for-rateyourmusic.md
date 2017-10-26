@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "A Beets Plugin for Rateyourmusic"
 date: "Tue Oct  28 20:41:33 WET 2014"
 ---
+
+# A Beets Plugin for Rateyourmusic
 
 Genres are usually neglected in my music library metadata. My primary source for
 music metadata [doesn't do genres][mb-genres] and therefore I tend not to worry

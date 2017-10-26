@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "An Inside Look into the Loot Train Attack Scene"
 date: "Wed Aug  9 01:14:39 WEST 2017"
 ---
+
+# An Inside Look into the Loot Train Attack Scene
 
 **WARNING**: Contains Game of Thrones spoilers from Season 7 Episode 4.
 

@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Advent of Code"
 date: "Wed Dec  9 23:41:22 WET 2015"
 ---
+
+# Advent of Code
 
 Yesterday, I started solving a series of small programming puzzles in
 [Advent of Code][adventofcode]. You get one puzzle per day, as a proper advent

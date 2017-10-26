@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "First Touch Penalty on Amazon EBS Volumes"
 date: "Tue Aug  8 00:42:15 WEST 2017"
 ---
+
+# First Touch Penalty on Amazon EBS Volumes
 
 Apparently, storage blocks on Amazon EBS volumes that were restored from
 snapshots incur in significant latency penalties on I/O operations the first

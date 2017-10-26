@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Tracking PostgreSQL Execution Statistics on Amazon RDS"
 date: "Fri Jul 21 02:20:15 WEST 2017"
 ---
+
+# Tracking PostgreSQL Execution Statistics on Amazon RDS
 
 I've recently been working with [PostgreSQL][postgresql] on [Amazon RDS][rds]
 and found out about the [`pg_stat_statements`][pgstatstatements] module, which allows tracking
