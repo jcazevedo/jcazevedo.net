@@ -7,7 +7,7 @@ date: "Tue Aug  8 00:42:15 WEST 2017"
 
 Apparently, storage blocks on Amazon EBS volumes that were restored from
 snapshots incur in significant latency penalties on I/O operations the first
-time they're accessed.
+time they're accessed. According to the [user guide][user-guide]:
 
 > New EBS volumes receive their maximum performance the moment that they are
 > available and do not require initialization (formerly known as pre-warming).
@@ -18,10 +18,10 @@ time they're accessed.
 > block is accessed. For most applications, amortizing this cost over the
 > lifetime of the volume is acceptable. Performance is restored after the data
 > is accessed once.
-> 
-> &mdash; <cite>[Initializing Amazon EBS Volumes](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html)</cite>
 
 This can be particularly painful when restoring Amazon RDS DB snapshots, as the
 performance can be severely impacted. In order to overcome the first touch
 penalty, it is advisable to warm up the disk by performing a full table scan or
 a vacuum on all tables in the database.
+
+[user-guide]: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-initialize.html
