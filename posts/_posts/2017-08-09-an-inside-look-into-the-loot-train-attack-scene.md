@@ -12,6 +12,4 @@ explosions to how stuntman need to keep their heart rate down in order to hold
 their breath while on fire, it's filled with a lot of details on how that
 amazing scene got filmed.
 
-<div class="video-container">
-<iframe class="video-embed" src="https://www.youtube.com/embed/pE2wcBeyNdk" frameborder="0" allowfullscreen></iframe>
-</div>
+{% youtube "https://www.youtube.com/watch?v=pE2wcBeyNdk" %}
