@@ -461,3 +461,13 @@ a.pagination-item:hover {
   width: 100%;
   height: 100%;
 }
+
+/*
+ * Figures
+ */
+
+figure figcaption {
+  font-size: 75%;
+  text-align: center;
+  color: silver;
+}
