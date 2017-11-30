@@ -6,10 +6,10 @@ date: "Fri Jul 21 02:20:15 WEST 2017"
 # Tracking PostgreSQL Execution Statistics on Amazon RDS
 
 I've recently been working with [PostgreSQL][postgresql] on [Amazon RDS][rds]
-and found out about the [`pg_stat_statements`][pgstatstatements] module, which allows tracking
-execution statistics of all SQL statements executed by the server. It can be
-very helpful when monitoring your application and discovering about slow running
-queries. It is also very easy to set up.
+and found out about the [`pg_stat_statements`][pgstatstatements] module, which
+allows tracking execution statistics of all SQL statements executed by the
+server. It can be very helpful when monitoring your application and discovering
+about slow running queries. It is also very easy to set up.
 
 ## Enabling it on Amazon RDS
 
