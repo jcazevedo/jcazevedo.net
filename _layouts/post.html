@@ -15,6 +15,20 @@
                     <span class="post-extra-header">{{ page.date | date: "%B %-d, %Y" }}</span>
                     {{ content }}
                 </div>
+
+                <div class="pagination">
+                  {% if page.previous.url %}
+                  <a class="pagination-item older" href="{{page.previous.url}}">&laquo; Previous</a>
+                  {% else %}
+                  <span class="pagination-item older">&laquo; Previous</span>
+                  {% endif %}
+                  <a class="pagination-item archive" href="/posts/archive">Archive</a>
+                  {% if page.next.url %}
+                  <a class="pagination-item newer" href="{{page.next.url}}">Next &raquo;</a>
+                  {% else %}
+                  <span class="pagination-item newer">Next &raquo;</span>
+                  {% endif %}
+                </div>
             </div>
             <div class="footer">
                 {% include footer.html %}
