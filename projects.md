@@ -58,7 +58,7 @@ that goes live.
 [YapR](https://github.com/jcazevedo/YapR) (2010 -- 2011)
 
 : A [YAP][yap] module to provide an interface to [R][r] in the Prolog engine.
-I'm not sure if still works, so use at your own risk.
+I'm not sure if it still works, so use at your own risk.
 
 [adforecaster]: http://www.adforecaster.com/
 [adstax]: http://dmp.shiftforward.eu/
