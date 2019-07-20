@@ -5,32 +5,31 @@ title: About
 
 # About
 
-I'm a Software Engineer currently working at [ShiftForward][1], where I'm
+I'm a Software Engineer currently working at [Velocidi][velocidi], where I'm
 involved in the development of large-scale systems for the online advertising
 industry. My interests in computer science usually revolve around artificial
 intelligence, machine learning, data mining, algorithms, data structures and
-programming language theory. I tend to [read][2], mostly computer science
-textbooks and science-fiction novels. I [listen to][3] and collect a lot of
-music. I have a tendency for electronic, experimental and indie music and I'm
-very fond of what people call [intelligent dance music][4]. I [play][steam] and
-collect a lot of computer games as well. I like indie, difficult and
-puzzle-related games, but end up playing a lot of different genres. I make an
-effort to keep as much of the code I write [open-source][5]. I also take
-[photos][6].
+programming language theory. I tend to [read][goodreads], mostly computer
+science textbooks and science-fiction novels. I [listen to][last.fm] and collect
+a lot of music. I have a tendency for electronic, experimental and indie music
+and I'm very fond of what people call [intelligent dance music][idm]. I
+[play][steam] and collect a lot of computer games as well. I like indie,
+difficult and puzzle-related games, but end up playing a lot of different
+genres. I make an effort to keep as much of the code I write
+[open-source][github].
 
-In case you're interested, you can grab my [CV][7]. You can contact me through
-[email][8], [twitter][9] or [IRC][10]. I usually lurk in the [freenode][11]
-network under the `jcazevedo` handle.
+In case you're interested, you can grab my [CV][cv]. You can contact me through
+[email][email], [twitter][twitter] or [IRC][irc]. I usually lurk in the
+[freenode][freenode] network under the `jcazevedo` handle.
 
-[1]: http://www.shiftforward.eu/
-[2]: http://www.goodreads.com/jcazevedo
-[3]: http://www.last.fm/user/jcazevedo
-[4]: http://en.wikipedia.org/wiki/Intelligent_dance_music
-[5]: https://github.com/jcazevedo
-[6]: http://www.flickr.com/photos/jcazevedo
-[7]: /contents/cv.pdf
-[8]: mailto:joao.c.azevedo@gmail.com
-[9]: http://twitter.com/jcazevedo
-[10]: http://en.wikipedia.org/wiki/IRC
-[11]: http://freenode.net/
+[cv]: /contents/cv.pdf
+[email]: mailto:joao.c.azevedo@gmail.com
+[freenode]: http://freenode.net/
+[github]: https://github.com/jcazevedo
+[goodreads]: http://www.goodreads.com/jcazevedo
+[idm]: http://en.wikipedia.org/wiki/Intelligent_dance_music
+[irc]: http://en.wikipedia.org/wiki/IRC
+[last.fm]: http://www.last.fm/user/jcazevedo
 [steam]: http://steamcommunity.com/id/jcazevedo/
+[twitter]: http://twitter.com/jcazevedo
+[velocidi]: https://www.velocidi.com/
