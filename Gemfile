@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'html-proofer', '3.9.2'
-gem 'jekyll', '3.8.5'
+gem 'jekyll', '3.8.6'
 gem 'jekyll-paginate', '1.1.0'
 gem 'jekyll-titles-from-headings', '0.5.1'
 gem 'jekyll-twitter-plugin', '2.0.0'
