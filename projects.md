@@ -5,14 +5,14 @@ title: Projects
 
 # Projects
 
-The following is the list of open source projects I currently work on:
+The following is a list of open source projects I currently work on:
 
 * [MoultingYAML](https://github.com/jcazevedo/moultingyaml): A Scala wrapper for
   [SnakeYAML][snakeyaml].
 * [PureConfig](https://github.com/pureconfig/pureconfig): A boilerplate-free
   Scala library for loading configuration files.
 
-The following is the list of open source projects that I started or helped
+The following is a list of open source projects that I started or helped
 maintain but are either "finished" or I'm no longer maintaining them:
 
 * [Advent of Code 2015](https://github.com/jcazevedo/advent-of-code-2015): Solutions to [Advent of Code 2015](https://adventofcode.com/2015) in Scala.
