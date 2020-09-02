@@ -471,3 +471,18 @@ figure figcaption {
   text-align: center;
   color: silver;
 }
+
+/*
+ * Messages
+ */
+
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #717171;
+  background-color: #f9f9f9;
+}
+
+.message p {
+  margin-bottom: 0rem;
+}
