@@ -79,6 +79,18 @@ using an unlimited number of targeting variables. It has been one of the
 projects I've been involved in since joining [ShiftForward][sf] (now
 [Velocidi][velocidi]) in 2012.
 
+[Dance. Don't Fall](http://dancedontfall.projects.fraunhofer.pt/) (2011)
+
+: A mobile application to monitor the risk of falling while actively reducing it
+through dancing exercises. I developed some signal analysis tools for it while
+at [Fraunhofer AICOS][fhp].
+
+[Mover](http://mover.projects.fraunhofer.pt/) (2010)
+
+: A mobile application to promote mobility among elder people. I designed and
+developed a new version which allowed for data to be stored and analyzed
+remotely while at [Fraunhofer AICOS][fhp].
+
 [YapR](https://github.com/jcazevedo/YapR) (2010 -- 2011)
 
 : A [YAP][yap] module to provide an interface to [R][r] in the Prolog engine.
@@ -92,3 +104,4 @@ I'm not sure if it still works, so use at your own risk.
 [snakeyaml]: https://bitbucket.org/asomov/snakeyaml
 [velocidi]: https://www.velocidi.com/
 [yap]: http://www.dcc.fc.up.pt/~vsc/Yap/
+[fhp]: https://www.aicos.fraunhofer.pt/
