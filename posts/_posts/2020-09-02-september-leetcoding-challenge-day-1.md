@@ -13,10 +13,10 @@ monthly explore packages in the form of challenges, in which they'd add a
 problem each day of the month. Solving all problems within 24 hours of their
 release makes you eligible for some rewards. I have been solving these monthly
 challenges for fun since April, but decided to start writing a bit about them in
-September. It's very easy to find solutions for most of these problems online,
-but I'll try to post these the day after the challenge, to avoid unnecessary
-copying. I'm solving these problems in C++, since it's my language of choice for
-this type of algorithmic programming problems.
+[September][september-challenge]. It's very easy to find solutions for most of
+these problems online, but I'll try to post these the day after the challenge,
+to avoid unnecessary copying. I'm solving these problems in C++, since it's my
+language of choice for this type of algorithmic programming problems.
 
 The problem for September 1 is [Largest Time for Given Digits][problem]. The
 statement is straightforward: given 4 digits, return the largest 24 hour time
@@ -131,3 +131,4 @@ number.
 
 [leetcode]: https://leetcode.com/
 [problem]: https://leetcode.com/problems/largest-time-for-given-digits/
+[september-challenge]: https://leetcode.com/explore/challenge/card/september-leetcoding-challenge/
