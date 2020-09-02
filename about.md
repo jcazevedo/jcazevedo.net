@@ -19,12 +19,10 @@ genres. I make an effort to keep as much of the code I write
 [open-source][github].
 
 In case you're interested, you can grab my [CV][cv]. You can contact me through
-[email][email], [twitter][twitter] or [IRC][irc]. I usually lurk in the
-[freenode][freenode] network under the `jcazevedo` handle.
+[email][email] or [twitter][twitter].
 
 [cv]: /contents/cv.pdf
 [email]: mailto:joao.c.azevedo@gmail.com
-[freenode]: http://freenode.net/
 [github]: https://github.com/jcazevedo
 [goodreads]: http://www.goodreads.com/jcazevedo
 [idm]: http://en.wikipedia.org/wiki/Intelligent_dance_music
