@@ -97,6 +97,7 @@ remotely while at [Fraunhofer AICOS][fhp].
 I'm not sure if it still works, so use at your own risk.
 
 [beets]: http://beets.radbox.org/
+[fhp]: https://www.aicos.fraunhofer.pt/
 [hocon]: https://github.com/lightbend/config/blob/master/HOCON.md#hocon-human-optimized-config-object-notation
 [r]: http://www.r-project.org/
 [rym]: http://rateyourmusic.com/
@@ -104,4 +105,3 @@ I'm not sure if it still works, so use at your own risk.
 [snakeyaml]: https://bitbucket.org/asomov/snakeyaml
 [velocidi]: https://www.velocidi.com/
 [yap]: http://www.dcc.fc.up.pt/~vsc/Yap/
-[fhp]: https://www.aicos.fraunhofer.pt/
