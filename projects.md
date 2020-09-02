@@ -68,8 +68,7 @@ updated it in ages, but might be able to give support to it if the need arises.
 [rateyourmusic.com][rym]. It’s written in Python, using lxml and requests.
 [rateyourmusic.com][rym] doesn't allow access via scraping or scripts which
 accesses the site in an automated fashion, so you should refrain from using this
-until they complete their API. I'll probably revive the project once that goes
-live.
+until they complete their API. I might revive the project once that goes live.
 
 [AdForecaster](https://www.adforecaster.com/) (2012 -- )
 
@@ -82,14 +81,14 @@ projects I've been involved in since joining [ShiftForward][sf] (now
 [Dance. Don't Fall](http://dancedontfall.projects.fraunhofer.pt/) (2011)
 
 : A mobile application to monitor the risk of falling while actively reducing it
-through dancing exercises. I developed some signal analysis tools for it while
+through dancing exercises. I developed some signal analysis tools for it, while
 at [Fraunhofer AICOS][fhp].
 
 [Mover](http://mover.projects.fraunhofer.pt/) (2010)
 
 : A mobile application to promote mobility among elder people. I designed and
 developed a new version which allowed for data to be stored and analyzed
-remotely while at [Fraunhofer AICOS][fhp].
+remotely, while at [Fraunhofer AICOS][fhp].
 
 [YapR](https://github.com/jcazevedo/YapR) (2010 -- 2011)
 
