@@ -19,6 +19,7 @@ maintain but are either "finished" or I'm no longer maintaining them:
 * [Advent of Code 2016](https://github.com/jcazevedo/advent-of-code-2016): Solutions to [Advent of Code 2016](https://adventofcode.com/2016) in Scala.
 * [Advent of Code 2017](https://github.com/jcazevedo/advent-of-code-2017): Solutions to [Advent of Code 2017](https://adventofcode.com/2017) in Scala.
 * [Advent of Code 2018](https://github.com/jcazevedo/advent-of-code-2018): Solutions to [Advent of Code 2018](https://adventofcode.com/2018) in 25 different programming languages.
+* [Advent of Code 2019](https://github.com/jcazevedo/advent-of-code-2019): Solutions to [Advent of Code 2019](https://adventofcode.com/2019) in C++.
 * [Mucuchies](https://github.com/ShiftForward/mucuchies): An engine for dashboards that only requires a browser to run.
 * [YapR](https://github.com/jcazevedo/YapR): A [YAP][yap] module to provide an interface to [R][r] in the Prolog engine.
 * [beets-rymgenre](https://github.com/jcazevedo/beets-rymgenre): A plugin for [beets][beets] to fetch genre information from [rateyourmusic.com][rym].
