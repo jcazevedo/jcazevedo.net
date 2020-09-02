@@ -36,6 +36,8 @@ project in 2016 and am now one of the maintainers.
 [Solutions for Advent of Code 2016](https://github.com/jcazevedo/advent-of-code-2016) (2016)
 
 : Solutions for [Advent of Code 2016](https://adventofcode.com/2016), in Scala.
+[Advent of Code](https://adventofcode.com/) is an advent calendar of small
+programming puzzles.
 
 [MoultingYAML](https://github.com/jcazevedo/moultingyaml) (2015 -- )
 
