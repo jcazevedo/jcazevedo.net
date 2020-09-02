@@ -80,7 +80,7 @@ using an unlimited number of targeting variables. It has been one of the
 projects I've been involved in since joining [ShiftForward][sf] (now
 [Velocidi][velocidi]) in 2012.
 
-[Dance. Don't Fall](http://dancedontfall.projects.fraunhofer.pt/) (2011)
+[Dance. Don't Fall!](http://dancedontfall.projects.fraunhofer.pt/) (2011)
 
 : A mobile application to monitor the risk of falling while actively reducing it
 through dancing exercises. I developed some signal analysis tools for it, while
