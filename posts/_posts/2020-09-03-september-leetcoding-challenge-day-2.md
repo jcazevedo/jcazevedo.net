@@ -14,13 +14,12 @@ information.
 
 </div>
 
-The problem for September 2 is [Contains Duplicate
-III](https://leetcode.com/problems/contains-duplicate-iii/). The title of the
-problem is a bit misleading, since the statement isn't about finding duplicates.
-Instead, we're interested in finding, from an array of numbers `nums` and
-integers `k` and `t`, whether there are two distinct indices `i` and `j` such
-that the absolute difference of `nums[i]` and `nums[j]` is at most `t` and the
-absolute difference between `i` and `j` is at most `k`.
+The problem for September 2 is [Contains Duplicate III][problem]. The title of
+the problem is a bit misleading, since the statement isn't about finding
+duplicates. Instead, we're interested in finding, from an array of numbers
+`nums` and integers `k` and `t`, whether there are two distinct indices `i` and
+`j` such that the absolute difference of `nums[i]` and `nums[j]` is at most `t`
+and the absolute difference between `i` and `j` is at most `k`.
 
 One way to approach this problem is to, for each number in the array, check if
 there is a number in the previous `k` numbers such that the absolute difference
