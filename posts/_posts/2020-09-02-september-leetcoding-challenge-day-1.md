@@ -26,7 +26,7 @@ string if no valid time can be made.
 A possible solution for this problem is to enumerate all valid times and check
 the largest one that uses all of the provided digits. Since there are at most
 $$24 \times 60 = 1440$$ valid times, this is good enough to avoid a time limit
-exceeded. The following is a sample implementation of that strategy:
+exceeded. The following is an implementation of that strategy:
 
 {% highlight cpp %}
 class Solution {
@@ -80,8 +80,7 @@ public:
 Another possible solution is to iterate through all the permutations of the
 provided digits, and return the one that produces a valid time and is the
 largest. Since there are only $$4! = 24$$ permutations, this runs much faster
-than the previous solution. The following is a sample implementation of that
-strategy:
+than the previous solution. The following is an implementation of that strategy:
 
 {% highlight cpp %}
 class Solution {

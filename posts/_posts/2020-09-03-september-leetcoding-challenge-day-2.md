@@ -34,8 +34,8 @@ minimizes the absolute difference. A way to implement this in C++ is to use a
 `nums`). Elements in C++
 [`multisets`](http://www.cplusplus.com/reference/set/multiset/) are sorted and
 the interface provides both `lower_bound` and `upper_bound` methods to search
-for elements in logarithmic time complexity. The following is a sample
-implementation of that strategy:
+for elements in logarithmic time complexity. The following is an implementation
+of that strategy:
 
 {% highlight cpp %}
 class Solution {

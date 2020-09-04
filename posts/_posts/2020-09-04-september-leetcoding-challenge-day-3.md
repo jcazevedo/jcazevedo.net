@@ -22,7 +22,7 @@ should return true if, for a given string $$s$$, there exists a proper substring
 $$m$$ of $$s$$ such that $$s = m + \dots + m = n \times m$$, for $$n > 1$$.
 
 The size of the string is small enough to check all proper substrings of $$s$$
-(in $$\mathcal{O}(n^2)$$ time). The following is a sample implementation of that
+(in $$\mathcal{O}(n^2)$$ time). The following is an implementation of that
 strategy:
 
 {% highlight cpp %}
@@ -75,9 +75,8 @@ at an $$\mathcal{O}(N)$$ solution for this problem. The
 [Knuth-Morris-Pratt][kmp] (KMP) algorithm allows searching for occurrences of a
 word $$W$$ within a main text string $$S$$ in $$\mathcal{O}(|W|) +
 \mathcal{O}(|S|)$$ using $$\mathcal{O}(|W|)$$ extra space, and is therefore
-suitable for our use case. I won't go into details describing the KMP algorithm,
-but the following is a sample implementation of the previously described
-strategy:
+suitable for our use case. I won't go into details describing the KMP algorithm.
+The following is an implementation of the previously described strategy:
 
 {% highlight cpp %}
 class Solution {
