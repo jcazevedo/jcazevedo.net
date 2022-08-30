@@ -9,8 +9,6 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-twitter-plugin
   - jekyll-youtube
-figures:
-  dir: /img
 titles_from_headings:
   enabled: true
   strip_title: true
