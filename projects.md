@@ -97,12 +97,12 @@ remotely, while at [Fraunhofer AICOS][fhp].
 : A [YAP][yap] module to provide an interface to [R][r] in the Prolog engine.
 I'm not sure if it still works, so use at your own risk.
 
-[beets]: http://beets.radbox.org/
+[beets]: https://beets.readthedocs.io/
 [fhp]: https://www.aicos.fraunhofer.pt/
 [hocon]: https://github.com/lightbend/config/blob/master/HOCON.md#hocon-human-optimized-config-object-notation
-[r]: http://www.r-project.org/
-[rym]: http://rateyourmusic.com/
+[r]: https://www.r-project.org/
+[rym]: https://rateyourmusic.com/
 [sf]: https://www.shiftforward.eu/
-[snakeyaml]: https://bitbucket.org/asomov/snakeyaml
+[snakeyaml]: https://bitbucket.org/snakeyaml/snakeyaml
 [velocidi]: https://www.velocidi.com/
-[yap]: http://www.dcc.fc.up.pt/~vsc/Yap/
+[yap]: https://www.dcc.fc.up.pt/~vsc/yap/

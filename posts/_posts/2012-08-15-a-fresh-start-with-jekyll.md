@@ -49,15 +49,15 @@ new platform, I figured I would have a tough time with formatting issues. So,
 for now, I'm keeping everything under the [/old/][11] subdirectory. This also
 means that the RSS feed URL has also changed, so grab the new one [here][12].
 
-[1]: http://github.com/mojombo/jekyll/
-[2]: http://wordpress.org/
-[3]: http://daringfireball.net/projects/markdown/
-[4]: http://jblevins.org/projects/markdown-mode/
-[5]: http://github.com/mojombo/jekyll/wiki/usage
-[6]: http://pygments.org/
-[7]: http://tom.preston-werner.com/
-[8]: http://www.google.com/webfonts
-[9]: http://disqus.com/
-[10]: http://github.com/mojombo/jekyll/wiki/Blog-Migrations
-[11]: /old/
+[1]: https://github.com/mojombo/jekyll/
+[2]: https://wordpress.org/
+[3]: https://daringfireball.net/projects/markdown/
+[4]: https://jblevins.org/projects/markdown-mode/
+[5]: https://github.com/mojombo/jekyll/wiki/usage
+[6]: https://pygments.org/
+[7]: https://tom.preston-werner.com/
+[8]: https://www.google.com/webfonts
+[9]: https://disqus.com/
+[10]: https://github.com/mojombo/jekyll/wiki/Blog-Migrations
+[11]: https://jcazevedo.net/old/
 [12]: /atom.xml
