@@ -50,7 +50,6 @@ GEM
       listen (~> 3.0)
     jekyll-youtube (1.0.0)
       jekyll
-    jekyll_figure (0.0.3)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -97,7 +96,6 @@ DEPENDENCIES
   jekyll-titles-from-headings (= 0.5.3)
   jekyll-twitter-plugin (= 2.1.0)
   jekyll-youtube (= 1.0.0)
-  jekyll_figure (= 0.0.3)
   rb-fsevent (= 0.11.2)
   webrick (= 1.7.0)
 
