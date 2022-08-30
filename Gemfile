@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "webrick", "~> 1.7"
 gem 'html-proofer', '3.15.3'
 gem 'jekyll', '4.1.1'
 gem 'jekyll-paginate', '1.1.0'
