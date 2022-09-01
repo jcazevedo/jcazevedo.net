@@ -46,10 +46,10 @@ resource "aws_s3_bucket_policy" "www_jcazevedo_net_allow_public_access" {
 data "aws_iam_policy_document" "jcazevedo_net_allow_public_access" {
   statement {
     principals {
-      type = "AWS"
+      type        = "AWS"
       identifiers = ["*"]
     }
-    actions = ["s3:GetObject"]
+    actions   = ["s3:GetObject"]
     resources = ["${aws_s3_bucket.jcazevedo_net.arn}/*"]
   }
 }
@@ -57,10 +57,10 @@ data "aws_iam_policy_document" "jcazevedo_net_allow_public_access" {
 data "aws_iam_policy_document" "www_jcazevedo_net_allow_public_access" {
   statement {
     principals {
-      type = "AWS"
+      type        = "AWS"
       identifiers = ["*"]
     }
-    actions = ["s3:GetObject"]
+    actions   = ["s3:GetObject"]
     resources = ["${aws_s3_bucket.www_jcazevedo_net.arn}/*"]
   }
 }

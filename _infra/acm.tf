@@ -1,7 +1,7 @@
 resource "aws_acm_certificate" "ssl_certificate" {
-  domain_name = "jcazevedo.net"
+  domain_name               = "jcazevedo.net"
   subject_alternative_names = ["*.jcazevedo.net"]
-  validation_method = "EMAIL"
+  validation_method         = "EMAIL"
   lifecycle {
     create_before_destroy = true
   }
