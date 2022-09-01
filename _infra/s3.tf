@@ -1,29 +1,22 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-
-  backend "s3" {
-    bucket = "jcazevedo-terraform-state"
-    key = "terraform.tfstate"
-    region = "us-east-1"
-  }
-}
-
 resource "aws_s3_bucket" "jcazevedo_net" {
   bucket = "jcazevedo.net"
 }
 
+resource "aws_s3_bucket_cors_configuration" "jcazevedo_net" {
+  bucket = aws_s3_bucket.jcazevedo_net.id
+  cors_rule {
+    allowed_headers = ["Authorization", "Content-Length"]
+    allowed_methods = ["GET", "POST"]
+    allowed_origins = ["https://jcazevedo.net"]
+    max_age_seconds = 3000
+  }
+}
+
 resource "aws_s3_bucket_website_configuration" "jcazevedo_net" {
   bucket = aws_s3_bucket.jcazevedo_net.bucket
-
   index_document {
     suffix = "index.html"
   }
-
   error_document {
     key = "404/index.html"
   }
@@ -42,20 +35,5 @@ data "aws_iam_policy_document" "jcazevedo_net_allow_public_access" {
     }
     actions = ["s3:GetObject"]
     resources = ["${aws_s3_bucket.jcazevedo_net.arn}/*"]
-  }
-}
-
-resource "aws_route53_zone" "jcazevedo_net" {
-  name = "jcazevedo.net"
-}
-
-resource "aws_route53_record" "jcazevedo_net-a" {
-  zone_id = aws_route53_zone.jcazevedo_net.zone_id
-  name = "jcazevedo.net"
-  type = "A"
-  alias {
-    name = aws_s3_bucket.jcazevedo_net.website_endpoint
-    zone_id = aws_s3_bucket.jcazevedo_net.hosted_zone_id
-    evaluate_target_health = true
   }
 }
