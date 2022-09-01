@@ -21,6 +21,10 @@ resource "aws_s3_bucket_website_configuration" "jcazevedo_net" {
   index_document {
     suffix = "index.html"
   }
+
+  error_document {
+    key = "404/index.html"
+  }
 }
 
 resource "aws_s3_bucket_policy" "jcazevedo_net_allow_public_access" {
