@@ -4,22 +4,22 @@ resource "aws_route53_zone" "jcazevedo_net" {
 
 resource "aws_route53_record" "jcazevedo_net-a" {
   zone_id = aws_route53_zone.jcazevedo_net.zone_id
-  name = "jcazevedo.net"
-  type = "A"
+  name    = "jcazevedo.net"
+  type    = "A"
   alias {
-    name = aws_cloudfront_distribution.root_s3_distribution.domain_name
-    zone_id = aws_cloudfront_distribution.root_s3_distribution.hosted_zone_id
+    name                   = aws_cloudfront_distribution.root_s3_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.root_s3_distribution.hosted_zone_id
     evaluate_target_health = false
   }
 }
 
 resource "aws_route53_record" "www_jcazevedo_net-a" {
   zone_id = aws_route53_zone.jcazevedo_net.zone_id
-  name = "www.jcazevedo.net"
-  type = "A"
+  name    = "www.jcazevedo.net"
+  type    = "A"
   alias {
-    name = aws_cloudfront_distribution.www_s3_distribution.domain_name
-    zone_id = aws_cloudfront_distribution.www_s3_distribution.hosted_zone_id
+    name                   = aws_cloudfront_distribution.www_s3_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.www_s3_distribution.hosted_zone_id
     evaluate_target_health = false
   }
 }
