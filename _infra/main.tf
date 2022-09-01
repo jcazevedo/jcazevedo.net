@@ -8,6 +8,8 @@ terraform {
 
   backend "s3" {
     bucket = "jcazevedo-terraform-state"
+    key = "terraform.tfstate"
+    region = "us-east-1"
   }
 }
 
