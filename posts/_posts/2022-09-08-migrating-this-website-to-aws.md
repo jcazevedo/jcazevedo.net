@@ -371,6 +371,6 @@ S3, the website continued to be served as expected from
 [dreamhost]: https://www.dreamhost.com/
 [free tier]: https://aws.amazon.com/s3/pricing/#AWS_Free_Tier
 [letsencrypt]: https://letsencrypt.org/
+[route53]: https://aws.amazon.com/route53/
 [terraform]: https://www.terraform.io/
 [transfer-domain]: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html
-[route53]: https://aws.amazon.com/route53/
