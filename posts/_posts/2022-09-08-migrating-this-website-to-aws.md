@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Migrating this Website to AWS
+title: Migrating This Website to AWS
 date: 2022-09-08 00:47 +0100
 ---
-# Migrating this Website to AWS
+# Migrating This Website to AWS
 
 I've decided to migrate this website from [DreamHost][dreamhost] to [Amazon Web
 Services][aws]. The main driver for this is costs. This is a static website
@@ -27,7 +27,7 @@ have the `jcazevedo.net` domain transferred and have an SSL certificate
 provisioned by AWS (I was previously using [Let's Encrypt][letsencrypt]). I also
 didn't mind downtime (again, this is a very low traffic website).
 
-## Setting up Terraform
+## Setting Up Terraform
 
 It wasn't absolutely necessary to use [Terraform][terraform] (or any tool
 allowing for infrastructure as code) for this. I don't predict wanting to have
@@ -69,7 +69,7 @@ remotely managing state that we were trying to avoid with it in the first place.
 
 With this set up, a call to `terraform init` should complete successfully.
 
-## Setting Up the S3 bucket(s)
+## Setting Up the S3 Bucket(s)
 
 The next step was to set up the S3 buckets. I actually went with 2 buckets: one
 for the root domain (`jcazevedo.net`) and another for the `www` subdomain
@@ -212,7 +212,7 @@ For the validation method I used email instead of DNS since at that time I
 didn't have the DNS moved yet. The email validation is performed while we're
 applying the Terraform diff, so it's quite fast.
 
-## Setting up the CloudFront distributions
+## Setting Up the CloudFront Distributions
 
 [CloudFront][cloudfront] speeds up the distribution of static (and dynamic) web
 content. It can handle caching, compression and can require viewers to use HTTPS
@@ -320,7 +320,7 @@ The configurations are similar, except for the caching settings, since the
 second distribution only points to the S3 bucket that redirects to the non-`www`
 website.
 
-## Adding Route53 Records Pointing to the CloudFront distributions
+## Adding Route53 Records Pointing to the CloudFront Distributions
 
 The last part of the process involved creating new Route53 A records pointing to
 the CloudFront distributions created previously. For this, I've added the
