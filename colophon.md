@@ -12,10 +12,10 @@ being used is a modified version of the one in [Hyde][hyde]. The most up-to-date
 source is available on [GitHub][github]. The generated static site is synced
 with my [DreamHost][dreamhost] box using [rsync][rsync].
 
-[emacs]: http://www.gnu.org/software/emacs/
-[dreamhost]: http://www.dreamhost.com/
-[jekyll]: http://jekyllrb.com/
-[hyde]: http://hyde.getpoole.com/
-[markdown]: http://daringfireball.net/projects/markdown/
-[rsync]: http://rsync.samba.org/
-[github]: http://github.com/jcazevedo/jcazevedo.net
+[emacs]: https://www.gnu.org/software/emacs/
+[dreamhost]: https://www.dreamhost.com/
+[jekyll]: https://jekyllrb.com/
+[hyde]: https://hyde.getpoole.com/
+[markdown]: https://daringfireball.net/projects/markdown/
+[rsync]: https://rsync.samba.org/
+[github]: https://github.com/jcazevedo/jcazevedo.net
