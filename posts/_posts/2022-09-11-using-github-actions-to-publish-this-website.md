@@ -104,6 +104,7 @@ With the credentials set up, we can run the commands we previously listed:
 The full YAML for the workflow definition is as follows:
 
 {% highlight yaml %}
+{% raw %}
 name: Deploy
 
 on:
@@ -133,6 +134,7 @@ jobs:
       - run: aws s3 sync _site/ s3://jcazevedo.net/ --delete
       - run: aws cloudfront create-invalidation --distribution-id E1M51KVTH60PJ5 --paths '/*'
       - run: aws cloudfront create-invalidation --distribution-id E2YP0O47Y4BTWK --paths '/*'
+{% endraw %}
 {% endhighlight %}
 
 ## Creating a User for GitHub Actions
