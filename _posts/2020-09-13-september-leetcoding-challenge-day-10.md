@@ -8,9 +8,8 @@ date: "Sun Sep 13 18:14:51 WEST 2020"
 <div class="message" markdown="1">
 
 This is part of a series of posts about the [September LeetCoding
-Challenge][september-challenge]. Check the [first post]({% link
-_posts/2020-09-02-september-leetcoding-challenge-day-1.md %}) for more
-information.
+Challenge][september-challenge]. Check the [first post]({% post_url
+2020-09-02-september-leetcoding-challenge-day-1 %}) for more information.
 
 </div>
 
