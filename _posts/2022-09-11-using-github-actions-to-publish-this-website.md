@@ -5,12 +5,11 @@ date: 2022-09-11 23:16 +0000
 ---
 # Using GitHub Actions to Publish This Website
 
-I [have recently moved]({% post_url
-posts/2022-09-07-migrating-this-website-to-aws %}) this website from
-[DreamHost][dreamhost] to [AWS][aws]. While I was able to automate the setup of
-the infrastructure, I was still deploying changes manually. It is not a very
-cumbersome process and it involves the following steps after a change is
-created:
+I [have recently moved]({% post_url 2022-09-07-migrating-this-website-to-aws %})
+this website from [DreamHost][dreamhost] to [AWS][aws]. While I was able to
+automate the setup of the infrastructure, I was still deploying changes
+manually. It is not a very cumbersome process and it involves the following
+steps after a change is created:
 
 1. Build the website;
 1. Sync the new website contents with the main S3 bucket;
@@ -143,7 +142,7 @@ To set up the credentials this workflow is going to use to interact with AWS, I
 wanted to create a user with permissions to interact with the relevant S3 bucket
 and CloudFront distributions only. To do that, I have added the following to the
 [Terraform][terraform] definition (refer to the [previous post]({% post_url
-posts/2022-09-07-migrating-this-website-to-aws %}#setting-up-terraform) for more
+2022-09-07-migrating-this-website-to-aws %}#setting-up-terraform) for more
 details on the existing Terraform definition):
 
 {% highlight terraform %}

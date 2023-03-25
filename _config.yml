@@ -18,3 +18,6 @@ url: http://jcazevedo.net
 exclude:
   - Rakefile
   - README.md
+collections:
+  posts:
+    permalink: /posts/:year/:month/:day/:title:output_ext

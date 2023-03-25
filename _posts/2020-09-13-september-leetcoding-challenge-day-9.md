@@ -9,7 +9,7 @@ date: "Sun Sep 13 18:13:53 WEST 2020"
 
 This is part of a series of posts about the [September LeetCoding
 Challenge][september-challenge]. Check the [first post]({% link
-posts/_posts/2020-09-02-september-leetcoding-challenge-day-1.md %}) for more
+_posts/2020-09-02-september-leetcoding-challenge-day-1.md %}) for more
 information.
 
 </div>

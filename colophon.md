@@ -14,9 +14,9 @@ source is available on [GitHub][github]. The generated static site is pushed to
 found in the following posts:
 
 - [Migrating This Website to AWS]({% post_url
-  posts/2022-09-07-migrating-this-website-to-aws %})
+  2022-09-07-migrating-this-website-to-aws %})
 - [Using GitHub Actions to Publish This Website]({% post_url
-  posts/2022-09-11-using-github-actions-to-publish-this-website %})
+  2022-09-11-using-github-actions-to-publish-this-website %})
 
 [S3 static website]: https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html
 [emacs]: https://www.gnu.org/software/emacs/
