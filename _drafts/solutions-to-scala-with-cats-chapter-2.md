@@ -9,6 +9,12 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 2.3: The Truth About Monoids](#exercise-23-the-truth-about-monoids)
+- [Exercise 2.4: All Set for Monoids](#exercise-24-all-set-for-monoids)
+- [Exercise 2.5.4: Adding All the Things](#exercise-254-adding-all-the-things)
+
 ## Exercise 2.3: The Truth About Monoids
 
 For this exercise, rather than defining instances for the proposed types, I
