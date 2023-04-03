@@ -9,6 +9,12 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 3.5.4: Branching out with Functors](#exercise-354-branching-out-with-functors)
+- [Exercise 3.6.1.1: Showing off with Contramap](#exercise-3611-showing-off-with-contramap)
+- [Exercise 3.6.2.1: Transformative Thinking with _imap_](#exercise-3621-transformative-thinking-with-imap)
+
 ## Exercise 3.5.4: Branching out with Functors
 
 A `Functor` for `Tree` can be implemented as follows:
