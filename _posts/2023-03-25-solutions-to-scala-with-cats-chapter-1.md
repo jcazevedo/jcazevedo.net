@@ -8,14 +8,14 @@ These are my solutions to the exercises of chapter 1 of [Scala with
 Cats][scala-with-cats]. The book is available for free at
 [https://www.scalawithcats.com/][scala-with-cats].
 
+[scala-with-cats]: https://www.scalawithcats.com/
+
 ## Table of Contents
 
 - [Setting Up the Scala Project](#setting-up-the-scala-project)
 - [Exercise 1.3: Printable Library](#exercise-13-printable-library)
 - [Exercise 1.4.6: Cat Show](#exercise-146-cat-show)
 - [Exercise 1.5.5: Equality, Liberty, and Felinity](#exercise-155-equality-liberty-and-felinity)
-
-[scala-with-cats]: https://www.scalawithcats.com/
 
 ## Setting Up the Scala Project
 
