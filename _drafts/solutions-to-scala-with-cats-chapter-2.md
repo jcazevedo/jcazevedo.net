@@ -116,3 +116,82 @@ def setSymdiff[A]: Monoid[Set[A]] = new Monoid[Set[A]] {
   def empty: Set[A] = Set.empty[A]
 }
 {% endhighlight %}
+
+## Exercise 2.5.4: Adding All the Things
+
+The exercise is clearly hinting us towards using a monoid, but the first step
+can be defined in terms of `Int` only. The description doesn't tell us what we
+should do in case of an empty list, but, since we're in a chapter about monoids,
+I assume we want to return the identity element:
+
+{% highlight scala %}
+def add(items: List[Int]): Int =
+  items.foldLeft(0)(_ + _)
+{% endhighlight %}
+
+Changing the code above to also work with `Option[Int]` and making sure there is
+no code duplication can be achieved by introducing a dependency on a `Monoid`
+instance:
+
+{% highlight scala %}
+import cats.Monoid
+
+def add[A](items: List[A])(implicit monoid: Monoid[A]): A =
+  items.foldLeft(monoid.empty)(monoid.combine)
+{% endhighlight %}
+
+With the above in place we continue to be able to add `Int`s, but we're also now
+able to add `Option[Int]`s, provided we have the appropriate `Monoid` instances
+in place:
+
+{% highlight scala %}
+import cats.instances.int._
+import cats.instances.option._
+
+add(List(1, 2, 3))
+// Returns 6.
+
+add(List(1))
+// Returns 1.
+
+add(List.empty[Int])
+// Returns 0.
+
+add(List(Some(1), Some(2), Some(3), None))
+// Returns Some(6).
+
+add(List(Option.apply(1)))
+// Returns Some(1).
+
+add(List.empty[Option[Int]])
+// Returns None.
+{% endhighlight %}
+
+To be able to add `Order` instances without making any modifications to `add`,
+we can define a `Monoid` instance for `Order`. In this case, we're piggybacking
+on the `Monoid` instance for `Double`, but we could've implemented the sums and
+the production of the identity element directly:
+
+{% highlight scala %}
+case class Order(totalCost: Double, quantity: Double)
+
+object Order {
+  implicit val orderMonoid: Monoid[Order] = new Monoid[Order] {
+    import cats.instances.double._
+
+    val doubleMonoid = Monoid[Double]
+
+    def combine(x: Order, y: Order): Order =
+      Order(
+        totalCost = doubleMonoid.combine(x.totalCost, y.totalCost),
+        quantity = doubleMonoid.combine(x.quantity, y.quantity)
+      )
+
+    def empty: Order =
+      Order(
+        totalCost = doubleMonoid.empty,
+        quantity = doubleMonoid.empty
+      )
+  }
+}
+{% endhighlight %}
