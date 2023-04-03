@@ -3,6 +3,7 @@ layout: post
 title: 'Solutions to "Scala with Cats": Chapter 1'
 date: 2023-03-25 20:13 +0000
 ---
+
 These are my solutions to the exercises of chapter 1 of [Scala with
 Cats][scala-with-cats]. The book is available for free at
 [https://www.scalawithcats.com/][scala-with-cats].
