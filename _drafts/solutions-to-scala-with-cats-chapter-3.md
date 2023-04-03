@@ -48,3 +48,33 @@ On the above, we won't be able to call `map` directly over instances of `Branch`
 or `Leaf` because we don't have `Functor` instances in place for those types. To
 make the API more friendly, we can add smart constructors to `Tree` (i.e.
 `branch` and `leaf` methods that return instances of type `Tree`).
+
+## Exercise 3.6.1.1: Showing off with Contramap
+
+To implement the `contramap` method, we can create a `Printable` instance that
+uses the `format` of the instance it's called on (note the `self` reference) and
+uses `func` to transform the value to an appropriate type:
+
+{% highlight scala %}
+trait Printable[A] { self =>
+  def format(value: A): String
+
+  def contramap[B](func: B => A): Printable[B] =
+    new Printable[B] {
+      def format(value: B): String =
+        self.format(func(value))
+    }
+}
+{% endhighlight %}
+
+With this `contramap` method in place, it becomes simpler to define a
+`Printable` instance for our `Box` case class:
+
+{% highlight scala %}
+final case class Box[A](value: A)
+
+object Box {
+  implicit def printableBox[A](implicit p: Printable[A]): Printable[Box[A]] =
+    p.contramap(_.value)
+}
+{% endhighlight %}
