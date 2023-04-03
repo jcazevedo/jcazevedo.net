@@ -7,7 +7,7 @@ These are my solutions to the exercises of chapter 1 of [Scala with
 Cats][scala-with-cats]. The book is available for free at
 [https://www.scalawithcats.com/][scala-with-cats].
 
-The contents are as follows:
+## Table of Contents
 
 - [Setting Up the Scala Project](#setting-up-the-scala-project)
 - [Exercise 1.3: Printable Library](#exercise-13-printable-library)
