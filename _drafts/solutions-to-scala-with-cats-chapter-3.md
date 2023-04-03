@@ -78,3 +78,41 @@ object Box {
     p.contramap(_.value)
 }
 {% endhighlight %}
+
+## Exercise 3.6.2.1: Transformative Thinking with _imap_
+
+To implement `imap` for `Codec`, we need to rely on the `encode` and `decode`
+methods of the instance `imap` is called on:
+
+{% highlight scala %}
+trait Codec[A] { self =>
+  def encode(value: A): String
+  def decode(value: String): A
+  def imap[B](dec: A => B, enc: B => A): Codec[B] =
+    new Codec[B] {
+      def encode(value: B): String = self.encode(enc(value))
+      def decode(value: String): B = dec(self.decode(value))
+    }
+}
+{% endhighlight %}
+
+Similarly to what's described in the chapter, we can create a `Codec` for
+`Double` by piggybacking on the `Codec` for `String` that we already have in
+place:
+
+{% highlight scala %}
+implicit val doubleCodec: Codec[Double] =
+  stringCodec.imap(_.toDouble, _.toString)
+{% endhighlight %}
+
+When implementing the `Codec` for `Box`, we can use `imap` and describe how to
+box and unbox a value, respectively:
+
+{% highlight scala %}
+final case class Box[A](value: A)
+
+object Box {
+  implicit def codec[A](implicit c: Codec[A]): Codec[Box[A]] =
+    c.imap(Box.apply, _.value)
+}
+{% endhighlight %}
