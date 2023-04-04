@@ -219,3 +219,89 @@ input by whitespaces:
 def evalInput(input: String): Int =
   evalAll(input.split("\\s+").toList).runA(Nil).value
 {% endhighlight %}
+
+## Exercise 4.10.1: Branching out Further with Monads
+
+One implementation of `Monad` for `Tree` is the following:
+
+{% highlight scala %}
+implicit val treeMonad: Monad[Tree] = new Monad[Tree] {
+  def pure[A](a: A): Tree[A] =
+    Leaf(a)
+
+  def flatMap[A, B](fa: Tree[A])(f: A => Tree[B]): Tree[B] =
+    fa match {
+      case Branch(left, right) =>
+        Branch(flatMap(left)(f), flatMap(right)(f))
+
+      case Leaf(value) =>
+        f(value)
+    }
+
+  def tailRecM[A, B](a: A)(f: A => Tree[Either[A, B]]): Tree[B] =
+    flatMap(f(a)) {
+      case Left(value) =>
+        tailRecM(value)(f)
+
+      case Right(value) =>
+        Leaf(value)
+    }
+}
+{% endhighlight %}
+
+However, `tailRecM` isn't tail-recursive. We can make it tail-recursive by
+making the recursion explicit in the heap. In this case, we're using two mutable
+stacks: one of open nodes to visit and one of already visited nodes. On that
+stack, we use `None` to signal a non-leaf node and a `Some` to signal a leaf
+node.
+
+{% highlight scala %}
+implicit val treeMonad: Monad[Tree] = new Monad[Tree] {
+  def pure[A](a: A): Tree[A] =
+    Leaf(a)
+
+  def flatMap[A, B](fa: Tree[A])(f: A => Tree[B]): Tree[B] =
+    fa match {
+      case Branch(left, right) =>
+        Branch(flatMap(left)(f), flatMap(right)(f))
+
+      case Leaf(value) =>
+        f(value)
+    }
+
+  def tailRecM[A, B](a: A)(f: A => Tree[Either[A, B]]): Tree[B] = {
+    import scala.collection.mutable
+
+    val open = mutable.Stack.empty[Tree[Either[A, B]]]
+    val closed = mutable.Stack.empty[Option[Tree[B]]]
+
+    open.push(f(a))
+
+    while (open.nonEmpty) {
+      open.pop() match {
+        case Branch(l, r) =>
+          open.push(r)
+          open.push(l)
+          closed.push(None)
+
+        case Leaf(Left(value)) =>
+          open.push(f(value))
+
+        case Leaf(Right(value)) =>
+          closed.push(Some(pure(value)))
+      }
+    }
+
+    val ans = mutable.Stack.empty[Tree[B]]
+
+    while (closed.nonEmpty) {
+      closed.pop() match {
+        case None    => ans.push(Tree.branch(ans.pop(), ans.pop()))
+        case Some(v) => ans.push(v)
+      }
+    }
+
+    ans.pop()
+  }
+}
+{% endhighlight %}
