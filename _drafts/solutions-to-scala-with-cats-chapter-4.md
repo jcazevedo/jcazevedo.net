@@ -55,3 +55,21 @@ things that the previous examples for error handling don't cover are:
 * We can't accumulate errors. The proposed examples all fail fast.
 * We can't tell exactly where the error was raised.
 * It's not easy to do error recovery.
+
+## Exercise 4.5.4: Abstracting
+
+A possible implementation for `validateAdult` is the following:
+
+{% highlight scala %}
+import cats.{Applicative, MonadError}
+
+def validateAdult[F[_]](age: Int)(implicit me: MonadError[F, Throwable]): F[Int] =
+  if (age >= 18) Applicative[F].pure(age)
+  else me.raiseError(new IllegalArgumentException("Age must be greater than or equal to 18"))
+}
+{% endhighlight %}
+
+If `age` is greater than or equal to 18, we summon an `Applicative` for `F`
+(which we must have in scope due to `MonadError`) and lift the `age` to `F`. If
+`age` is less than 18, we use the `MonadError` instance we have in scope to lift
+an `IllegalArgumentException` to `F`.
