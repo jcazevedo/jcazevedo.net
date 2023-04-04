@@ -46,3 +46,12 @@ def map[A, B](value: Id[A])(func: A => B): Id[B] =
 Since `Id[A]` is just a type alias for `A`, we can notice that we avoid all
 boxing in the implementations and, due to that fact, `flatMap` and `map` are
 identical.
+
+## Exercise 4.4.5: What is Best?
+
+The answer depends on what we are looking for in specific instances, but some
+things that the previous examples for error handling don't cover are:
+
+* We can't accumulate errors. The proposed examples all fail fast.
+* We can't tell exactly where the error was raised.
+* It's not easy to do error recovery.
