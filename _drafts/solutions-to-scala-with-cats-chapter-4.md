@@ -133,3 +133,39 @@ Await.result(Future.sequence(Vector(
 //   Vector("fact 0 1", "fact 1 1", "fact 2 2", "fact 3 6", "fact 4 24", "fact 5 120")
 // )
 {% endhighlight %}
+
+## Exercise 4.8.3: Hacking on Readers
+
+To create a type alias for a `Reader` that consumes a `Db` we want to fix the
+first type parameter of `Reader` to `Db`, while still leaving the result type as
+a type parameter:
+
+{% highlight scala %}
+import cats.data.Reader
+
+type DbReader[A] = Reader[Db, A]
+{% endhighlight %}
+
+The `findUsername` and `checkPassword` functions can be implemented as follows:
+
+{% highlight scala %}
+def findUsername(userId: Int): DbReader[Option[String]] =
+  Reader.apply(db => db.usernames.get(userId))
+
+def checkPassword(username: String, password: String): DbReader[Boolean] =
+  Reader.apply(db => db.passwords.get(username).contains(password))
+{% endhighlight %}
+
+The `checkLogin` method can be implemented as follows:
+
+{% highlight scala %}
+def checkLogin(userId: Int, password: String): DbReader[Boolean] =
+  for {
+    usernameOpt <- findUsername(userId)
+    validLogin <- usernameOpt.map(checkPassword(_, password)).getOrElse(Reader.apply((_: Db) => false))
+  } yield validLogin
+{% endhighlight %}
+
+We are making use of the `findUsername` and `checkPassword` methods. There are
+two scenarios in which `checkLogin` can return a `false` for a given `Db`: when
+the username doesn't exist and when the passwords don't match.
