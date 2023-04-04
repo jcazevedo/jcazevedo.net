@@ -73,3 +73,27 @@ If `age` is greater than or equal to 18, we summon an `Applicative` for `F`
 (which we must have in scope due to `MonadError`) and lift the `age` to `F`. If
 `age` is less than 18, we use the `MonadError` instance we have in scope to lift
 an `IllegalArgumentException` to `F`.
+
+## Exercise 4.6.5: Safer Folding using Eval
+
+One way to make the naive implementation of `foldRight` stack safe using `Eval`
+is the following:
+
+{% highlight scala %}
+import cats.Eval
+
+def foldRightEval[A, B](as: List[A], acc: B)(fn: (A, B) => B): B = {
+  def aux(as: List[A], acc: B): Eval[B] =
+    as match {
+      case head :: tail =>
+        Eval.defer(aux(tail, acc)).map(fn(head, _))
+      case Nil =>
+        Eval.now(acc)
+    }
+
+  aux(as, acc).value
+}
+{% endhighlight %}
+
+We defer the call to the recursive step and then map over it to apply `fn`, all
+within the context of `Eval`.
