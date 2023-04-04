@@ -9,6 +9,18 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 4.1.2: Getting Func-y](#exercise-412-getting-func-y)
+- [Exercise 4.3.1: Monadic Secret Identities](#exercise-431-monadic-secret-identities)
+- [Exercise 4.4.5: What is Best?](#exercise-445-what-is-best)
+- [Exercise 4.5.4: Abstracting](#exercise-454-abstracting)
+- [Exercise 4.6.5: Safer Folding using Eval](#exercise-465-safer-folding-using-eval)
+- [Exercise 4.7.3: Show Your Working](#exercise-473-show-your-working)
+- [Exercise 4.8.3: Hacking on Readers](#exercise-483-hacking-on-readers)
+- [Exercise 4.9.3: Post-Order Calculator](#exercise-493-post-order-calculator)
+- [Exercise 4.10.1: Branching out Further with Monads](#exercise-4101-branching-out-further-with-monads)
+
 ## Exercise 4.1.2: Getting Func-y
 
 We have `pure` and `flatMap` to define `map`. We want to start from an `F[A]`
