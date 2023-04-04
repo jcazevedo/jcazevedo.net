@@ -168,4 +168,4 @@ def checkLogin(userId: Int, password: String): DbReader[Boolean] =
 
 We are making use of the `findUsername` and `checkPassword` methods. There are
 two scenarios in which `checkLogin` can return a `false` for a given `Db`: when
-the username doesn't exist and when the passwords don't match.
+the username doesn't exist and when the password doesn't match.
