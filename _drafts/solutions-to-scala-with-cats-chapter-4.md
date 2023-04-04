@@ -33,13 +33,13 @@ trait Monad[F[_]] {
 `pure`, `map` and `flatMap` for `Id` can be implemented as follows:
 
 {% highlight scala %}
-def pure[A](a: A): Id[A] = 
+def pure[A](a: A): Id[A] =
   a
-  
-def flatMap[A, B](value: Id[A])(func: A => Id[B]): Id[B] = 
+
+def flatMap[A, B](value: Id[A])(func: A => Id[B]): Id[B] =
   func(value)
-  
-def map[A, B](value: Id[A])(func: A => B): Id[B] = 
+
+def map[A, B](value: Id[A])(func: A => B): Id[B] =
   func(value)
 {% endhighlight %}
 
