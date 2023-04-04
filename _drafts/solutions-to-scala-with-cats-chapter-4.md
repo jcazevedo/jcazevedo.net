@@ -169,3 +169,53 @@ def checkLogin(userId: Int, password: String): DbReader[Boolean] =
 We are making use of the `findUsername` and `checkPassword` methods. There are
 two scenarios in which `checkLogin` can return a `false` for a given `Db`: when
 the username doesn't exist and when the password doesn't match.
+
+## Exercise 4.9.3: Post-Order Calculator
+
+A possible implementation of `evalOne` with no proper error handling is the
+following:
+
+{% highlight scala %}
+def evalOne(sym: String): CalcState[Int] = {
+  def op(f: (Int, Int) => Int): CalcState[Int] = State {
+    case y :: x :: rest =>
+      val ans = f(x, y)
+      (ans :: rest, ans)
+    case _ =>
+      throw new IllegalArgumentException("Insufficient stack size")
+  }
+
+  def num(value: String): CalcState[Int] = State { s =>
+    val ans = value.toInt
+    (ans :: s, ans)
+  }
+
+  sym match {
+    case "+"   => op(_ + _)
+    case "*"   => op(_ * _)
+    case "-"   => op(_ - _)
+    case "/"   => op(_ / _)
+    case other => num(other)
+  }
+}
+{% endhighlight %}
+
+We're not told which operands to support, so I assumed at least `+`, `*`, `-`
+and `/`.
+
+For the `evalAll` implementation, we're not told what to do in case the input is
+empty. I assumed it would be OK to just have an exception thrown (since that was
+the case before), and relied on `reduce` over the `evalOne` calls:
+
+{% highlight scala %}
+def evalAll(input: List[String]): CalcState[Int] =
+  input.map(evalOne).reduce((e1, e2) => e1.flatMap(_ => e2))
+{% endhighlight %}
+
+The `evalInput` method can rely on a call to `evalAll` after splitting the
+input by whitespaces:
+
+{% highlight scala %}
+def evalInput(input: String): Int =
+  evalAll(input.split("\\s+").toList).runA(Nil).value
+{% endhighlight %}
