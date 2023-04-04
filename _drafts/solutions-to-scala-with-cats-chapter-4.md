@@ -97,3 +97,39 @@ def foldRightEval[A, B](as: List[A], acc: B)(fn: (A, B) => B): B = {
 
 We defer the call to the recursive step and then map over it to apply `fn`, all
 within the context of `Eval`.
+
+## Exercise 4.7.3: Show Your Working
+
+A possible rewrite of `factorial` so that it captures the log messages in a
+`Writer` is the following:
+
+{% highlight scala %}
+import cats.data.Writer
+
+def factorial(n: Int): Writer[Vector[String], Int] = {
+  slowly {
+    if (n == 0)
+      Writer.apply(Vector("fact 0 1"), 1)
+    else
+      factorial(n - 1).mapBoth { (log, res) =>
+        val ans = res * n
+        (log :+ s"fact $n $ans", ans)
+      }
+  }
+}
+{% endhighlight %}
+
+We can show that this allows us to reliably separate the logs for concurrent
+computations because we have the logs for each instance captured in each
+`Writer` instance:
+
+{% highlight scala %}
+Await.result(Future.sequence(Vector(
+  Future(factorial(5)),
+  Future(factorial(5))
+)).map(_.map(_.written)), 5.seconds)
+// Returns Vector(
+//   Vector("fact 0 1", "fact 1 1", "fact 2 2", "fact 3 6", "fact 4 24", "fact 5 120"),
+//   Vector("fact 0 1", "fact 1 1", "fact 2 2", "fact 3 6", "fact 4 24", "fact 5 120")
+// )
+{% endhighlight %}
