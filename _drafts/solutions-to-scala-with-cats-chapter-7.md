@@ -83,3 +83,20 @@ Vector(
   List(2, 4, 6)
 )
 {% endhighlight %}
+
+## Exercise 7.2.2.2: Traversing with Options
+
+The return type of the `process` method is `Option[List[Int]]` and it will
+return a `Some` of the provided input if all integers in the argument list are
+even and `None` otherwise. Therefore, it will produce the following for the
+first call:
+
+{% highlight scala %}
+Some(List(2, 4, 6))
+{% endhighlight %}
+
+And the following for the second call:
+
+{% highlight scala %}
+None
+{% endhighlight %}
