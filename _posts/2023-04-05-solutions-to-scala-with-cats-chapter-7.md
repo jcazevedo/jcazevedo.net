@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Solutions to "Scala with Cats": Chapter 7'
+date: 2023-04-05 17:07 +0000
 ---
 
 These are my solutions to the exercises of chapter 7 of [Scala with
