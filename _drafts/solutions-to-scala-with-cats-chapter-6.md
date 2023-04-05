@@ -23,3 +23,19 @@ for {
 {% endhighlight %}
 
 Which results in the Cartesian product.
+
+## Exercise 6.4.0.1: Parallel List
+
+`List` does have a `Parallel` instance. It zips the lists instead of doing the
+Cartesian product. This can be exhibited by the following snippet:
+
+{% highlight scala %}
+import cats.instances.list._
+import cats.syntax.parallel._
+
+(List(1, 2), List(3, 4)).parTupled
+// Returns List((1, 3), (2, 4)).
+
+(List(1, 2), List(3, 4, 5)).parTupled
+// Returns List((1, 3), (2, 4)).
+{% endhighlight %}
