@@ -51,3 +51,35 @@ def sum[A](list: List[A])(implicit numeric: Numeric[A]): A =
 The `sum` method makes use of the `Numeric` type class from the Scala standard
 library. In the spirit of this book, we could also have created an
 implementation that uses the `Monoid` type class instead.
+
+## Exercise 7.2.2.1: Traversing with Vectors
+
+The result of the provided expression is going to be a `Vector` of `List`s, with
+each being the pairwise combination of the elements from both `Vector`s:
+
+{% highlight scala %}
+Vector(
+  List(1, 3),
+  List(1, 4),
+  List(2, 3),
+  List(2, 4)
+)
+{% endhighlight %}
+
+If we use a list of three parameters, we will get back a `Vector` of `List`s
+again, but this time each list is going to be of three elements and we will have
+one list per each possible triple combination of elements from each of the
+`Vector`s:
+
+{% highlight scala %}
+Vector(
+  List(1, 3, 5),
+  List(1, 3, 6),
+  List(1, 4, 5),
+  List(1, 4, 6),
+  List(2, 3, 5),
+  List(2, 3, 6),
+  List(2, 4, 5),
+  List(2, 4, 6)
+)
+{% endhighlight %}
