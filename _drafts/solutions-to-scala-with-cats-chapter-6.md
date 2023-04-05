@@ -9,6 +9,11 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 6.3.1.1: The Product of Lists](#exercise-6311-the-product-of-lists)
+- [Exercise 6.4.0.1: Parallel List](#exercise-6401-parallel-list)
+
 ## Exercise 6.3.1.1: The Product of Lists
 
 The reason `product` for `List` produces the Cartesian product is because `List`
