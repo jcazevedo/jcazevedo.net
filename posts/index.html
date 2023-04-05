@@ -3,17 +3,29 @@ layout: main
 title: Posts
 ---
 
-<h1>Posts</h1>
+{% for post in paginator.posts %}
+<div class="post">
+  <h1 class="post-title">{{ post.title }}</h1>
+  <span class="post-extra-header">{{ post.date | date: "%B %-d, %Y" }} <a href="{{ site.url }}{{ post.url }}">&#x221e;</a></span>
 
-<p>
-  The following is a list of things I have written for this website.
-</p>
+  {{ post.content }}
+</div>
+{% endfor %}
 
-<div class="archive-posts">
-  {% for post in site.posts %}
-  <div class="archive-item">
-    <div class="archive-post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-    <div class="archive-post-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-  </div>
-  {% endfor %}
+<div class="pagination">
+  {% if paginator.next_page %}
+  <a class="pagination-item older" href="/posts/{{paginator.next_page}}">&laquo; Older</a>
+  {% else %}
+  <span class="pagination-item older">&laquo; Older</span>
+  {% endif %}
+  <a class="pagination-item archive" href="/posts/archive">Archive</a>
+  {% if paginator.previous_page %}
+  {% if paginator.page == 2 %}
+  <a class="pagination-item newer" href="/posts">Newer &raquo;</a>
+  {% else %}
+  <a class="pagination-item newer" href="/posts/{{paginator.previous_page}}">Newer &raquo;</a>
+  {% endif %}
+  {% else %}
+  <span class="pagination-item newer">Newer &raquo;</span>
+  {% endif %}
 </div>
