@@ -87,7 +87,7 @@ Vector(
 ## Exercise 7.2.2.2: Traversing with Options
 
 The return type of the `process` method is `Option[List[Int]]` and it will
-return a `Some` of the provided input if all integers in the argument list are
+return a `Some` of the provided input if all integers in the list argument are
 even and `None` otherwise. Therefore, it will produce the following for the
 first call:
 
@@ -99,4 +99,21 @@ And the following for the second call:
 
 {% highlight scala %}
 None
+{% endhighlight %}
+
+## Exercise 7.2.2.3: Traversing with Validated
+
+The provided method will return a `Valid` with the list argument when all
+integers of it are even or an `Invalid` with a `List` of `String` for each
+element that is not even otherwise. Therefore, we get the following for the
+first call:
+
+{% highlight scala %}
+Valid(List(2, 4, 6))
+{% endhighlight %}
+
+And the following for the second call:
+
+{% highlight scala %}
+Invalid(List("1 is not even", "3 is not even"))
 {% endhighlight %}
