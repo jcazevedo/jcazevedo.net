@@ -9,6 +9,10 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 5.4: Transform and Roll Out](#exercise-54-transform-and-roll-out)
+
 ## Exercise 5.4: Transform and Roll Out
 
 We can rewrite `Response` using a monad transformer as follows:
