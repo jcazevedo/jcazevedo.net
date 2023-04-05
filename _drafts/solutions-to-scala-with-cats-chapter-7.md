@@ -9,6 +9,14 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 7.1.2: Reflecting on Folds](#exercise-712-reflecting-on-folds)
+- [Exercise 7.1.3: Scaf-fold-ing Other Methods](#exercise-713-scaf-fold-ing-other-methods)
+- [Exercise 7.2.2.1: Traversing with Vectors](#exercise-7221-traversing-with-vectors)
+- [Exercise 7.2.2.2: Traversing with Options](#exercise-7222-traversing-with-options)
+- [Exercise 7.2.2.3: Traversing with Validated](#exercise-7223-traversing-with-validated)
+
 ## Exercise 7.1.2: Reflecting on Folds
 
 If we use `foldLeft` with an empty list as the accumulator and `::` as the
