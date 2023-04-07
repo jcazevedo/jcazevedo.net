@@ -9,6 +9,12 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 9.2: Implementing _foldMap_](#exercise-92-implementing-foldmap)
+- [Exercise 9.3.3: Implementing _parallelFoldMap_](#exercise-933-implementing-parallelfoldmap)
+- [Exercise 9.3.4: _parallelFoldMap_ with more Cats](#exercise-934-parallelfoldmap-with-more-cats)
+
 ## Exercise 9.2: Implementing _foldMap_
 
 The signature of `foldMap` can be as follows. We add `Monoid` as a context bound
