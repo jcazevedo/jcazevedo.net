@@ -9,6 +9,11 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 8.1: Abstracting over Type Constructors](#exercise-81-abstracting-over-type-constructors)
+- [Exercise 8.2: Abstracting over Monads](#exercise-82-abstracting-over-monads)
+
 ## Exercise 8.1: Abstracting over Type Constructors
 
 To write a trait definition for `UptimeClient` that abstracts over the return
