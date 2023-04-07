@@ -49,3 +49,27 @@ dividing the length of our input by the number of batches we're going to run,
 rounding up. We spawn a `Future` with `foldMap` for each group and join them via
 `Future.sequence`, reducing the results of each batch with the `Monoid` instance
 we have in scope for `B`.
+
+## Exercise 9.3.4: _parallelFoldMap_ with more Cats
+
+To implement `parallelFoldMap` using `Foldable` and `Traverse` we import the
+respective instances from `cats.instances.vector` and the syntax extension
+methods that allow us to call `foldMap` and `traverse` directly on `Vector`
+instances:
+
+{% highlight scala %}
+import cats.instances.vector._
+import cats.syntax.foldable._
+import cats.syntax.traverse._
+
+def parallelFoldMap[A, B: Monoid](values: Vector[A])(func: A => B): Future[B] = {
+  val batches = Runtime.getRuntime().availableProcessors()
+  val groups = (values.length + batches - 1) / batches
+
+  values
+    .grouped(groups)
+    .toVector
+    .traverse(group => Future(group.foldMap(func)))
+    .map(_.combineAll)
+}
+{% endhighlight %}
