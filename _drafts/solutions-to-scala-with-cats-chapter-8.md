@@ -51,3 +51,31 @@ class TestUptimeClient(hosts: Map[String, Int]) extends UptimeClient[Id] {
     hosts.getOrElse(hostname, 0)
 }
 {% endhighlight %}
+
+## Exercise 8.2: Abstracting over Monads
+
+We can rewrite the method signatures of `UptimeService` so that it abstracts
+over the context as follows:
+
+{% highlight scala %}
+class UptimeService[F[_]](client: UptimeClient[F]) {
+  def getTotalUptime(hostnames: List[String]): F[Int] =
+    ???
+}
+{% endhighlight %}
+
+To get the previous implementation working, we need to not only prove the
+compiler that `F` has an `Applicative`, but also add a few syntax imports so
+that we can call `traverse` and `map`:
+
+{% highlight scala %}
+import cats.Applicative
+import cats.instances.list._
+import cats.syntax.functor._
+import cats.syntax.traverse._
+
+class UptimeService[F[_]: Applicative](client: UptimeClient[F]) {
+  def getTotalUptime(hostnames: List[String]): F[Int] =
+     hostnames.traverse(client.getUptime).map(_.sum)
+}
+{% endhighlight %}
