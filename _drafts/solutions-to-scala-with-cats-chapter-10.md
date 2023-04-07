@@ -158,3 +158,93 @@ object Check {
     Pure(f)
 }
 {% endhighlight %}
+
+## Exercise 10.4.2: Checks
+
+With our previous `Check` renamed to `Predicate`, we can implement the new
+`Check` with the proposed interface as follows, using an algebraic data type
+approach as before:
+
+{% highlight scala %}
+import cats.Semigroup
+import cats.data.Validated
+
+sealed trait Check[E, A, B] {
+  import Check._
+
+  def apply(a: A)(implicit s: Semigroup[E]): Validated[E, B]
+
+  def map[C](func: B => C): Check[E, A, C] =
+    Map[E, A, B, C](this, func)
+}
+
+object Check {
+  final case class Map[E, A, B, C](check: Check[E, A, B], func: B => C) extends Check[E, A, C] {
+    def apply(a: A)(implicit s: Semigroup[E]): Validated[E, C] =
+      check(a).map(func)
+  }
+
+  final case class Pure[E, A](pred: Predicate[E, A]) extends Check[E, A, A] {
+    def apply(a: A)(implicit s: Semigroup[E]): Validated[E, A] =
+      pred(a)
+  }
+
+  def pure[E, A](pred: Predicate[E, A]): Check[E, A, A] =
+    Pure(pred)
+}
+{% endhighlight %}
+
+`flatMap` is a bit weird to implement because we don't have a `flatMap` for
+`Validated`. Fortunately, we have `flatMap` in `Either` and a `withEither`
+method in `Validated` that allows us to apply a function over an `Either` that
+gets converted back to a `Validated`.
+
+{% highlight scala %}
+sealed trait Check[E, A, B] {
+  // ...
+
+  def flatMap[C](func: B => Check[E, A, C]) =
+    FlatMap[E, A, B, C](this, func)
+
+  // ...
+}
+
+object Check {
+  // ...
+
+  final case class FlatMap[E, A, B, C](check: Check[E, A, B], func: B => Check[E, A, C])
+      extends Check[E, A, C] {
+    def apply(a: A)(implicit s: Semigroup[E]): Validated[E, C] =
+      check(a).withEither(_.flatMap(b => func(b)(a).toEither))
+  }
+
+  // ...
+}
+{% endhighlight %}
+
+`andThen` gets implemented very similarly to `flatMap`, except that we don't use
+the output of the first `Check` to decide which other `Check` to use. The next
+`Check` is already statically provided to us:
+
+{% highlight scala %}
+sealed trait Check[E, A, B] {
+  // ...
+
+  def andThen[C](that: Check[E, B, C]): Check[E, A, C] =
+    AndThen[E, A, B, C](this, that)
+
+  // ...
+}
+
+object Check {
+  // ...
+
+  final case class AndThen[E, A, B, C](left: Check[E, A, B], right: Check[E, B, C])
+      extends Check[E, A, C] {
+    def apply(a: A)(implicit s: Semigroup[E]): Validated[E, C] =
+      left(a).withEither(_.flatMap(b => right(b).toEither))
+  }
+
+  // ...
+}
+{% endhighlight %}
