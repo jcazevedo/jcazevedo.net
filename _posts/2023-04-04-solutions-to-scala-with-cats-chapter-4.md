@@ -5,8 +5,7 @@ date: 2023-04-04 18:59 +0000
 ---
 
 These are my solutions to the exercises of chapter 4 of [Scala with
-Cats][scala-with-cats]. The book is available for free at
-[https://www.scalawithcats.com/][scala-with-cats].
+Cats][scala-with-cats].
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
