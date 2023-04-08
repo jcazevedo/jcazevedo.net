@@ -77,3 +77,34 @@ final case class GCounter[A](counters: Map[String, A]) {
     counters.values.toList.combineAll
 }
 {% endhighlight %}
+
+## Exercise 11.4: Abstracting GCounter to a Type Class
+
+The implementation of an instance of the `GCounter` type class to `Map` closely
+resembles the original `GCounter` implementation:
+
+{% highlight scala %}
+import cats.kernel.CommutativeMonoid
+import cats.syntax.foldable._
+import cats.syntax.semigroup._
+
+trait GCounter[F[_, _], K, V] {
+  def increment(f: F[K, V])(k: K, v: V)(implicit m: CommutativeMonoid[V]): F[K, V]
+  def merge(f1: F[K, V], f2: F[K, V])(implicit b: BoundedSemiLattice[V]): F[K, V]
+  def total(f: F[K, V])(implicit m: CommutativeMonoid[V]): V
+}
+
+object GCounter {
+  implicit def mapInstance[K, V]: GCounter[Map, K, V] =
+    new GCounter[Map, K, V] {
+      def increment(f: Map[K, V])(k: K, v: V)(implicit m: CommutativeMonoid[V]): Map[K, V] =
+        f |+| Map(k -> v)
+
+      def merge(f1: Map[K, V], f2: Map[K, V])(implicit b: BoundedSemiLattice[V]): Map[K, V] =
+        f1 |+| f2
+
+      def total(f: Map[K, V])(implicit m: CommutativeMonoid[V]): V =
+        f.values.toList.combineAll
+    }
+}
+{% endhighlight %}
