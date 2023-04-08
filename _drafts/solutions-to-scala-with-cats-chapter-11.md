@@ -8,6 +8,14 @@ Cats][scala-with-cats].
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 11.2.3: GCounter Implementation](#exercise-1123-gcounter-implementation)
+- [Exercise 11.3.2: BoundedSemiLattice Instances](#exercise-1132-boundedsemilattice-instances)
+- [Exercise 11.3.3: Generic GCounter](#exercise-1133-generic-gcounter)
+- [Exercise 11.4: Abstracting GCounter to a Type Class](#exercise-114-abstracting-gcounter-to-a-type-class)
+- [Exercise 11.5: Abstracting a Key Value Store](#exercise-115-abstracting-a-key-value-store)
+
 ## Exercise 11.2.3: GCounter Implementation
 
 `GCounter` can be implemented as follows:
