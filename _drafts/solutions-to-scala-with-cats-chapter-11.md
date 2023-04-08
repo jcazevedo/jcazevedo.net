@@ -80,7 +80,7 @@ final case class GCounter[A](counters: Map[String, A]) {
 
 ## Exercise 11.4: Abstracting GCounter to a Type Class
 
-The implementation of an instance of the `GCounter` type class to `Map` closely
+The implementation of an instance of the `GCounter` type class for `Map` closely
 resembles the original `GCounter` implementation:
 
 {% highlight scala %}
