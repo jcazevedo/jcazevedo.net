@@ -14,7 +14,7 @@ Cats][scala-with-cats].
 
 {% highlight scala %}
 final case class GCounter(counters: Map[String, Int]) {
-  def increment(machine: String, amount: Int) =
+  def increment(machine: String, amount: Int): GCounter =
     GCounter(counters.updatedWith(machine)(v => Some(v.getOrElse(0) + amount)))
 
   def merge(that: GCounter): GCounter =
