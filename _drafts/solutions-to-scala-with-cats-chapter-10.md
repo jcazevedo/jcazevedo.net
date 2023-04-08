@@ -300,3 +300,48 @@ val emailAddressCheck = {
     .map({ case ((left, right)) => s"$left@$right" })
 }
 {% endhighlight %}
+
+## Exercise 10.5: Kleislis
+
+The `run` method on `Predicate` must return a `A => Either[E, A]`. We must rely
+on the existing `apply` method so we also need a `Semigroup` instance for `E`:
+
+{% highlight scala %}
+sealed trait Predicate[E, A] {
+  // ...
+
+  def run(implicit s: Semigroup[E]): A => Either[E, A] =
+    a => apply(a).toEither
+
+  // ...
+}
+{% endhighlight %}
+
+Our checks don't change much. We have decided to implement the email address
+check slightly differently here, applying the checks directly in the split step:
+
+{% highlight scala %}
+val usernameCheck = checkPred(longerThan(3) and alphanumeric)
+
+val emailAddressCheck = {
+  val checkLeft: Check[String, String] =
+    checkPred(longerThan(0))
+
+  val checkRight: Check[String, String] =
+    checkPred(longerThan(3) and contains('.'))
+
+  val split: Check[String, (String, String)] =
+    check(_.split('@') match {
+      case Array(name, domain) =>
+        Right((name, domain))
+
+      case _ =>
+        Left(error("Must contain a single @ character"))
+    })
+
+  val join: Check[(String, String), String] =
+    check({ case (l, r) => (checkLeft(l), checkRight(r)).mapN(_ + "@" + _) })
+
+  split andThen join
+}
+{% endhighlight %}
