@@ -9,6 +9,13 @@ Cats][scala-with-cats]. The book is available for free at
 
 [scala-with-cats]: https://www.scalawithcats.com/
 
+## Table of Contents
+
+- [Exercise 10.3: Basic Combinators](#exercise-103-basic-combinators)
+- [Exercise 10.4.2: Checks](#exercise-1042-checks)
+- [Exercise 10.4.3: Recap](#exercise-1043-recap)
+- [Exercise 10.5: Kleislis](#exercise-105-kleislis)
+
 ## Exercise 10.3: Basic Combinators
 
 The `and` method of `Check` will create a new `Check` that calls `apply` on both
