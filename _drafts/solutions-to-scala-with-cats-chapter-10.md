@@ -248,3 +248,55 @@ object Check {
   // ...
 }
 {% endhighlight %}
+
+## Exercise 10.4.3: Recap
+
+The helper predicates that are introduced in this exercise make use of a `lift`
+method on `Predicate` that we haven't implemented yet. Its implementation can be
+something like the following:
+
+{% highlight scala %}
+object Predicate {
+  // ...
+
+  def lift[E, A](e: E, func: A => Boolean): Predicate[E, A] =
+    pure(a => if (func(a)) Validated.Valid(a) else Validated.Invalid(e))
+
+  // ...
+}
+{% endhighlight %}
+
+A `Check` for username can be implemented as follows, making use of the
+`longerThan` and `alphanumeric` predicates.
+
+{% highlight scala %}
+val usernameCheck = Check.pure(longerThan(3) and alphanumeric)
+{% endhighlight %}
+
+A `Check` for the email address can be implemented as follows. We first check
+that the string contains at least one `@`, then split the string, check each of
+the sides and combine them back at the end:
+
+{% highlight scala %}
+val emailAddressCheck = {
+  val checkLeft =
+    Check.pure(longerThan(0))
+
+  val checkRight =
+    Check.pure(longerThan(3) and contains('.'))
+
+  val checkLeftAndRight =
+    Check.pure(Predicate.pure[Errors, (String, String)] { case ((left, right)) =>
+      (checkLeft(left), checkRight(right)).mapN((_, _))
+    })
+
+  Check
+    .pure(containsOnce('@'))
+    .map({ str =>
+      val Array(left, right) = str.split("@")
+      (left, right)
+    })
+    .andThen(checkLeftAndRight)
+    .map({ case ((left, right)) => s"$left@$right" })
+}
+{% endhighlight %}
