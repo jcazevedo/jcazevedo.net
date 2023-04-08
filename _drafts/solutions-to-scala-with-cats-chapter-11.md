@@ -55,3 +55,25 @@ object BoundedSemiLattice {
     }
 }
 {% endhighlight %}
+
+## Exercise 11.3.3: Generic GCounter
+
+The following is a possible implementation of a generic `GCounter` that uses
+instances of `CommutativeMonoid` and `BoundedSemiLattice`:
+
+{% highlight scala %}
+import cats.kernel.CommutativeMonoid
+import cats.syntax.foldable._
+import cats.syntax.semigroup._
+
+final case class GCounter[A](counters: Map[String, A]) {
+  def increment(machine: String, amount: A)(implicit m: CommutativeMonoid[A]): GCounter[A] =
+    GCounter(counters |+| Map(machine -> amount))
+
+  def merge(that: GCounter[A])(implicit b: BoundedSemiLattice[A]): GCounter[A] =
+    GCounter(counters |+| that.counters)
+
+  def total(implicit m: CommutativeMonoid[A]): A =
+    counters.values.toList.combineAll
+}
+{% endhighlight %}
