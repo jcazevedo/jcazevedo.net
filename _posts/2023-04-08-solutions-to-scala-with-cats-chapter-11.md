@@ -4,7 +4,7 @@ title: 'Solutions to "Scala with Cats": Chapter 11'
 date: 2023-04-08 18:27 +0000
 ---
 
-These are my solutions to the exercises of chapter 10 of [Scala with
+These are my solutions to the exercises of chapter 11 of [Scala with
 Cats][scala-with-cats].
 
 [scala-with-cats]: https://www.scalawithcats.com/
