@@ -23,3 +23,12 @@ resource "aws_route53_record" "www_jcazevedo_net-a" {
     evaluate_target_health = false
   }
 }
+
+resource "aws_route53_record" "jcazevedo-net-ssl-validation" {
+  allow_overwrite = true
+  name            = tolist(aws_acm_certificate.ssl_certificate.domain_validation_options)[0].resource_record_name
+  records         = [tolist(aws_acm_certificate.ssl_certificate.domain_validation_options)[0].resource_record_value]
+  type            = tolist(aws_acm_certificate.ssl_certificate.domain_validation_options)[0].resource_record_type
+  zone_id         = aws_route53_zone.jcazevedo_net.zone_id
+  ttl             = 60
+}
