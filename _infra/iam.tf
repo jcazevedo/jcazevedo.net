@@ -7,13 +7,13 @@ resource "aws_iam_access_key" "github-actions" {
 }
 
 output "github-actions_aws_iam_access_key_secret" {
-  value = aws_iam_access_key.github-actions.secret
+  value     = aws_iam_access_key.github-actions.secret
   sensitive = true
 }
 
 resource "aws_iam_user_policy" "github-actions" {
-  name = "github-actions_policy"
-  user = aws_iam_user.github-actions.name
+  name   = "github-actions_policy"
+  user   = aws_iam_user.github-actions.name
   policy = data.aws_iam_policy_document.github-actions_policy.json
 }
 
