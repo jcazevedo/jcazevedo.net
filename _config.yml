@@ -10,6 +10,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-twitter-plugin
   - jekyll-youtube
+  - jekyll-sitemap
 titles_from_headings:
   enabled: true
   strip_title: true
