@@ -32,3 +32,11 @@ resource "aws_route53_record" "jcazevedo-net-ssl-validation" {
   zone_id         = aws_route53_zone.jcazevedo_net.zone_id
   ttl             = 60
 }
+
+resource "aws_route53_record" "jcazevedo_net-google-confirmation" {
+  zone_id = aws_route53_zone.jcazevedo_net.zone_id
+  type    = "TXT"
+  name    = ""
+  records = ["google-site-verification=n47CU2GGpbQm1rSAlSAfx8sAueJE2KeTikyBgKMK964"]
+  ttl     = 60
+}
