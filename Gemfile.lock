@@ -99,7 +99,6 @@ DEPENDENCIES
   jekyll-titles-from-headings (= 0.5.3)
   jekyll-twitter-plugin (= 2.1.0)
   jekyll-youtube (= 1.0.0)
-  rb-fsevent (= 0.11.2)
 
 BUNDLED WITH
    2.4.9
