@@ -2,7 +2,10 @@
 layout: post
 title: Using GitHub Actions to Publish This Website
 date: 2022-09-11 23:16 +0000
+categories:
+  - infrastructure
 ---
+
 # Using GitHub Actions to Publish This Website
 
 I [have recently moved]({% post_url 2022-09-07-migrating-this-website-to-aws %})

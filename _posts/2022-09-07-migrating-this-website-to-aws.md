@@ -2,7 +2,10 @@
 layout: post
 title: Migrating This Website to AWS
 date: 2022-09-08 00:47 +0100
+categories:
+  - infrastructure
 ---
+
 # Migrating This Website to AWS
 
 I've decided to migrate this website from [DreamHost][dreamhost] to [Amazon Web
