@@ -30,8 +30,7 @@ programming puzzles.
 [PureConfig](https://github.com/pureconfig/pureconfig) (2016 -- )
 
 : A boilerplate-free Scala library for loading configuration files written in
-[HOCON][hocon], Java `.properties` or JSON. I started contributing to the
-project in 2016 and am now one of the maintainers.
+[HOCON][hocon], Java `.properties` or JSON.
 
 [Solutions for Advent of Code 2016](https://github.com/jcazevedo/advent-of-code-2016) (2016)
 
