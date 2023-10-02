@@ -265,6 +265,13 @@ img.center-image {
   display: block;
 }
 
+img.right-image {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
 /*
  * Tables
  */
@@ -336,6 +343,7 @@ tbody tr:nth-child(odd) th {
 .page,
 .post {
   margin-bottom: 4em;
+  display: flow-root;
 }
 
 .page-title,

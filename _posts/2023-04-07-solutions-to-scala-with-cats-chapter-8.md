@@ -2,6 +2,9 @@
 layout: post
 title: 'Solutions to "Scala with Cats": Chapter 8'
 date: 2023-04-07 13:51 +0000
+categories:
+  - book-solutions
+  - scala-with-cats
 ---
 
 These are my solutions to the exercises of chapter 8 of [Scala with

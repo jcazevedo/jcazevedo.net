@@ -2,6 +2,9 @@
 layout: post
 title: 'Solutions to "Scala with Cats": Chapter 1'
 date: 2023-03-25 20:13 +0000
+categories:
+  - book-solutions
+  - scala-with-cats
 ---
 
 These are my solutions to the exercises of chapter 1 of [Scala with
