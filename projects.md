@@ -16,7 +16,7 @@ project in 2016 and am now one of the maintainers.
 [Solutions to LeetCode problems](https://github.com/jcazevedo/leetcode/) (2016 --)
 
 : [LeetCode][leetcode] is an online platform providing coding and algorithmic
-problems. Every now and then and solve problems there.
+problems. Every now and then I solve problems there.
 
 [MoultingYAML](https://github.com/jcazevedo/moultingyaml) (2015 -- )
 
