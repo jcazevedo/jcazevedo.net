@@ -7,55 +7,45 @@ title: Projects
 
 The following is a list of projects I have worked on or am currently working on.
 
-[Solutions for Advent of Code 2019](https://github.com/jcazevedo/advent-of-code-2019) (2019)
-
-: Solutions for [Advent of Code 2019](https://adventofcode.com/2019), in C++.
-[Advent of Code](https://adventofcode.com/) is an advent calendar of small
-programming puzzles.
-
-[Solutions for Advent of Code 2018](https://github.com/jcazevedo/advent-of-code-2018) (2018)
-
-: Solutions for [Advent of Code 2018](https://adventofcode.com/2018), in 25
-different programming languages, one for each day. [Advent of
-Code](https://adventofcode.com/) is an advent calendar of small programming
-puzzles. I used 2018's edition to experiment with some programming languages I
-was less familiar with.
-
-[Solutions for Advent of Code 2017](https://github.com/jcazevedo/advent-of-code-2017) (2017)
-
-: Solutions for [Advent of Code 2017](https://adventofcode.com/2017), in Scala.
-[Advent of Code](https://adventofcode.com/) is an advent calendar of small
-programming puzzles.
-
 [PureConfig](https://github.com/pureconfig/pureconfig) (2016 -- )
 
 : A boilerplate-free Scala library for loading configuration files written in
-[HOCON][hocon], Java `.properties` or JSON.
+[HOCON][hocon], Java `.properties` or JSON. I started contributing to the
+project in 2016 and am now one of the maintainers.
 
-[Solutions for Advent of Code 2016](https://github.com/jcazevedo/advent-of-code-2016) (2016)
+[Solutions to LeetCode problems](https://github.com/jcazevedo/leetcode/) (2016 --)
 
-: Solutions for [Advent of Code 2016](https://adventofcode.com/2016), in Scala.
-[Advent of Code](https://adventofcode.com/) is an advent calendar of small
-programming puzzles.
+: [LeetCode][leetcode] is an online platform providing coding and algorithmic
+problems. Every now and then and solve problems there.
 
 [MoultingYAML](https://github.com/jcazevedo/moultingyaml) (2015 -- )
 
 : A Scala wrapper for [SnakeYAML][snakeyaml], providing a simple immutable model
-of the YAML language, built on top of SnakeYAML models, as well as type-class
+of the YAML language, built on top of SnakeYAML models, as well as type class
 based (de)serialization of custom objects.
 
-[Solutions for Advent of Code 2015](https://github.com/jcazevedo/advent-of-code-2015) (2015)
+[Solutions to Advent of Code problems](https://github.com/jcazevedo/advent-of-code) (2015 -- 2022)
 
-: Solutions for [Advent of Code 2015](https://adventofcode.com/2015), in Scala.
-[Advent of Code](https://adventofcode.com/) is an advent calendar of small
-programming puzzles.
+: [Advent of Code](https://adventofcode.com/) is an advent calendar of small
+programming puzzles. There were years in which I solved the problems in Scala
+([2015](https://github.com/jcazevedo/advent-of-code/tree/master/2015),
+[2016](https://github.com/jcazevedo/advent-of-code/tree/master/2016),
+[2017](https://github.com/jcazevedo/advent-of-code/tree/master/2017),
+[2020](https://github.com/jcazevedo/advent-of-code/tree/master/2020),
+[2021](https://github.com/jcazevedo/advent-of-code/tree/master/2021/scala),
+[2022](https://github.com/jcazevedo/advent-of-code/tree/master/2022)), a year in
+which I solved them in C++
+([2019](https://github.com/jcazevedo/advent-of-code/tree/master/2019)) and a
+year in which I dabbled in multiple programming languages
+([2018](https://github.com/jcazevedo/advent-of-code/tree/master/2018)).
 
-[~~AdStax~~ ~~The ShiftForward Private DMP~~ Velocidi's Customer Data Platform](https://www.velocidi.com/product/) (2014 -- )
+[Kevel Audience](https://www.kevel.com/audience) (2014 -- )
 
-: A customer data platform for e-commerce websites that provides data
-unification, smart segmentation and activation. It has been one of the projects
-I've been involved with at [Velocidi][velocidi] (previously [ShiftForward][sf])
-since 2014.
+: A customer data platform for first-party data collection and segmentation for
+audience activation and personalization, all deployed on a private
+infrastructure. It has been one of the projects I've been involved with at
+[Kevel][kevel] since 2022 (previously at [Velocidi][velocidi] -- since 2018 --
+and [ShiftForward][sf] -- since 2014).
 
 [Mucuchies](https://github.com/ShiftForward/mucuchies) (2014 -- 2016)
 
@@ -99,6 +89,8 @@ I'm not sure if it still works, so use at your own risk.
 [beets]: https://beets.readthedocs.io/
 [fhp]: https://www.aicos.fraunhofer.pt/
 [hocon]: https://github.com/lightbend/config/blob/master/HOCON.md#hocon-human-optimized-config-object-notation
+[kevel]: https://www.kevel.com/
+[leetcode]: https://leetcode.com/
 [r]: https://www.r-project.org/
 [rym]: https://rateyourmusic.com/
 [sf]: https://www.shiftforward.eu/
