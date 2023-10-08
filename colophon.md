@@ -14,7 +14,7 @@ source is available on [GitHub][github]. The generated static site is pushed to
 found in the following posts:
 
 {% for post in site.categories.infrastructure reversed %}
-{% include archive_item.html post=post %}
+{% include post_link.html post=post %}
 {% endfor %}
 
 [S3 static website]: https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html

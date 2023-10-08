@@ -370,18 +370,18 @@ tbody tr:nth-child(odd) th {
   padding-top: 1rem;
 }
 
-.archive-item {
+.post-link {
   margin-bottom: 0.6rem;
   border-bottom: 1px solid #eee;
 }
 
 @media (min-width: 34rem) {
-  .archive-post-date {
+  .post-link-date {
     float: right;
   }
 }
 
-.archive-post-date {
+.post-link-date {
   margin-top: 0;
   margin-bottom: 0;
   color: #999;

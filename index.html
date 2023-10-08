@@ -12,5 +12,5 @@ title: Home
 <h2>Latest posts (<a href="/posts">all</a>)</h2>
 
 {% for post in site.posts limit: 5 %}
-{% include archive_item.html post=post %}
+{% include post_link.html post=post %}
 {% endfor %}

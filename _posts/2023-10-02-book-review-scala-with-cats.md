@@ -39,7 +39,7 @@ in the following posts:
 
 {% for post in site.categories.scala-with-cats reversed %}
 {% if post != page %}
-{% include archive_item.html post=post %}
+{% include post_link.html post=post %}
 {% endif %}
 {% endfor %}
 
