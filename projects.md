@@ -13,7 +13,7 @@ The following is a list of projects I have worked on or am currently working on.
 [HOCON][hocon], Java `.properties` or JSON. I started contributing to the
 project in 2016 and am now one of the maintainers.
 
-[Solutions to LeetCode problems](https://github.com/jcazevedo/leetcode/) (2016 --)
+[Solutions to LeetCode problems](https://github.com/jcazevedo/leetcode/) (2016 -- )
 
 : [LeetCode][leetcode] is an online platform providing coding and algorithmic
 problems. Every now and then I solve problems there.
