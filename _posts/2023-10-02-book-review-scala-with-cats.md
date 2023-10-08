@@ -7,7 +7,7 @@ categories:
 - scala-with-cats
 ---
 
-<img src="/img/scala-with-cats.jpg" class="right-image" />
+<img src="/img/scala-with-cats.jpg" class="right-image scaled" />
 
 [Scala with Cats][scala-with-cats] is a book about the [Cats][cats] library,
 which provides abstractions for functional programming in the [Scala][scala]

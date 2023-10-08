@@ -272,6 +272,19 @@ img.right-image {
   display: inline-block;
 }
 
+img.scaled {
+  max-width: 8rem;
+  height: auto;
+  object-fit: scale-down;
+}
+
+@media (min-width: 34rem) {
+  img.scaled {
+    max-width: 10rem;
+    object-fit: scale-down;
+  }
+}
+
 /*
  * Tables
  */
