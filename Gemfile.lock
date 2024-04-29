@@ -126,7 +126,7 @@ DEPENDENCIES
   jekyll (~> 4)
   jekyll-compose (~> 0.12)
   jekyll-paginate (~> 1)
-  jekyll-sitemap (= 1.4.0)
+  jekyll-sitemap (~> 1)
   jekyll-titles-from-headings (= 0.5.3)
   jekyll-twitter-plugin (= 2.1.0)
   jekyll-youtube (= 1.0.0)
