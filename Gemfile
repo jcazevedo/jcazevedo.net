@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'html-proofer', '4.4.0'
+gem 'rake', '~> 13', group: :development
+
+gem 'html-proofer', '~> 5'
 gem 'jekyll', '4.3.2'
 gem 'jekyll-compose', '0.12.0'
 gem 'jekyll-paginate', '1.1.0'
