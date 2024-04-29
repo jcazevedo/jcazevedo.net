@@ -129,7 +129,7 @@ DEPENDENCIES
   jekyll-sitemap (~> 1)
   jekyll-titles-from-headings (~> 0.5)
   jekyll-twitter-plugin (~> 2)
-  jekyll-youtube (= 1.0.0)
+  jekyll-youtube (~> 1)
   rake (~> 13)
 
 BUNDLED WITH
