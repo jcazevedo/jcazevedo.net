@@ -128,7 +128,7 @@ DEPENDENCIES
   jekyll-paginate (~> 1)
   jekyll-sitemap (~> 1)
   jekyll-titles-from-headings (~> 0.5)
-  jekyll-twitter-plugin (= 2.1.0)
+  jekyll-twitter-plugin (~> 2)
   jekyll-youtube (= 1.0.0)
   rake (~> 13)
 
