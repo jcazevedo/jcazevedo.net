@@ -4,7 +4,7 @@ gem 'rake', '~> 13', group: :development
 
 gem 'html-proofer', '~> 5'
 gem 'jekyll', '~> 4'
-gem 'jekyll-compose', '0.12.0'
+gem 'jekyll-compose', '~> 0.12'
 gem 'jekyll-paginate', '1.1.0'
 gem 'jekyll-sitemap', '1.4.0'
 gem 'jekyll-titles-from-headings', '0.5.3'
