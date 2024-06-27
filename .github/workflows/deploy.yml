@@ -25,5 +25,5 @@ jobs:
           aws-region: us-east-1
 
       - run: aws s3 sync _site/ s3://jcazevedo.net/ --delete
-      - run: aws cloudfront create-invalidation --distribution-id E1M51KVTH60PJ5 --paths '/*'
-      - run: aws cloudfront create-invalidation --distribution-id E2YP0O47Y4BTWK --paths '/*'
+      - run: aws cloudfront create-invalidation --distribution-id ${{secrets.WWW_JCAZEVEDO_NET_DISTRIBUTION_ID}} --paths '/*'
+      - run: aws cloudfront create-invalidation --distribution-id ${{secrets.JCAZEVEDO_NET_DISTRIBUTION_ID}} --paths '/*'
