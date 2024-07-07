@@ -24,7 +24,7 @@ problems. Every now and then I solve problems there.
 of the YAML language, built on top of SnakeYAML models, as well as type class
 based (de)serialization of custom objects.
 
-[Solutions to Advent of Code problems](https://github.com/jcazevedo/advent-of-code) (2015 -- 2022)
+[Solutions to Advent of Code problems](https://github.com/jcazevedo/advent-of-code) (2015 -- 2023)
 
 : [Advent of Code](https://adventofcode.com/) is an advent calendar of small
 programming puzzles. There were years in which I solved the problems in Scala
@@ -33,10 +33,11 @@ programming puzzles. There were years in which I solved the problems in Scala
 [2017](https://github.com/jcazevedo/advent-of-code/tree/master/2017),
 [2020](https://github.com/jcazevedo/advent-of-code/tree/master/2020),
 [2021](https://github.com/jcazevedo/advent-of-code/tree/master/2021/scala),
-[2022](https://github.com/jcazevedo/advent-of-code/tree/master/2022)), a year in
-which I solved them in C++
-([2019](https://github.com/jcazevedo/advent-of-code/tree/master/2019)) and a
-year in which I dabbled in multiple programming languages
+[2022](https://github.com/jcazevedo/advent-of-code/tree/master/2022)), two years
+in which I solved them in C++
+([2019](https://github.com/jcazevedo/advent-of-code/tree/master/2019),
+[2023](https://github.com/jcazevedo/advent-of-code/tree/master/2023)) and a year
+in which I dabbled in multiple programming languages
 ([2018](https://github.com/jcazevedo/advent-of-code/tree/master/2018)).
 
 [Kevel Audience](https://www.kevel.com/audience) (2014 -- )
