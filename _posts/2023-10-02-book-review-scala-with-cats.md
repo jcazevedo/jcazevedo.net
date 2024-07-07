@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Book Review: "Scala with Cats"'
+title: 'Book Review: Scala with Cats'
 date: 2023-10-02 23:37 +0000
 categories:
 - book-reviews
