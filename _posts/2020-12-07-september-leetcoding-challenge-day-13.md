@@ -26,11 +26,11 @@ merging a new given interval to the existing set. We are also told that the
 original set of non-overlapping intervals is sorted according to their start
 point.
 
-This problem can be solved in $$O(n)$$ by iterating through the list of
-intervals and keeping track of an interval to merge (which originally is the new
-interval). Whenever we see a new interval, we decide whether we want to include
-it as is in the final set or merge with the new interval (if it overlaps). The
-following is an implementation of that idea:
+This problem can be solved in $$\mathcal{O}(n)$$ by iterating through the list
+of intervals and keeping track of an interval to merge (which originally is the
+new interval). Whenever we see a new interval, we decide whether we want to
+include it as is in the final set or merge with the new interval (if it
+overlaps). The following is an implementation of that idea:
 
 {% highlight cpp %}
 class Solution {
