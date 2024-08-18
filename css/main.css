@@ -257,7 +257,6 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
-  border-radius: 5px;
 }
 
 img.center-image {
