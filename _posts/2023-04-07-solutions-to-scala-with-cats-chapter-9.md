@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Solutions to "Scala with Cats": Chapter 9'
+title: 'Solutions to Scala with Cats: Chapter 9'
 date: 2023-04-07 15:21 +0000
 categories:
   - book-solutions
