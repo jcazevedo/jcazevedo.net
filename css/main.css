@@ -369,6 +369,14 @@ tbody tr:nth-child(odd) th {
   margin-top: 0;
 }
 
+.post-index {
+  color: #f0f0f0;
+}
+
+.post-extra-header .post-index {
+  float: right;
+}
+
 .post-extra-header {
   display: block;
   margin-top: -.5rem;

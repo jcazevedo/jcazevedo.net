@@ -1,7 +1,9 @@
 ---
 layout: post
 date: 2023-01-14 18:03 +0000
+index: 23
 ---
+
 # Using GitHub Packages for Scala
 
 We use Scala at `$WORK` for multiple projects. These projects rely on various

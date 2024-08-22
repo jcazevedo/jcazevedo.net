@@ -1,6 +1,7 @@
 ---
 layout: post
 date: "Wed Sep  2 19:34:26 WEST 2020"
+index: 8
 ---
 
 # September LeetCoding Challenge, Day 1: Largest Time for Given Digits

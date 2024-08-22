@@ -1,6 +1,7 @@
 ---
 layout: post
 date: "Wed Dec  9 23:41:22 WET 2015"
+index: 4
 ---
 
 # Advent of Code

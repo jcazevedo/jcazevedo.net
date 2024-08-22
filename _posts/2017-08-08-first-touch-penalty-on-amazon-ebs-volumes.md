@@ -1,6 +1,7 @@
 ---
 layout: post
 date: "Tue Aug  8 00:42:15 WEST 2017"
+index: 6
 ---
 
 # First Touch Penalty on Amazon EBS Volumes

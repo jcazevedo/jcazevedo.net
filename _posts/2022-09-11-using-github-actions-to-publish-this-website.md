@@ -2,6 +2,7 @@
 layout: post
 title: Using GitHub Actions to Publish This Website
 date: 2022-09-11 23:16 +0000
+index: 22
 categories:
   - infrastructure
 ---

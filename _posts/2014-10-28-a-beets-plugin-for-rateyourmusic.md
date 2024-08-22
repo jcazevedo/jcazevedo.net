@@ -1,6 +1,7 @@
 ---
 layout: post
 date: "Tue Oct  28 20:41:33 WET 2014"
+index: 3
 ---
 
 # A Beets Plugin for Rateyourmusic
