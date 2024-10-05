@@ -1,21 +1,19 @@
 ---
 layout: post
-title: 'LeetCode 1937: Maximum Number of Points with Cost'
+index: 36
 ---
+
+# LeetCode 1937: Maximum Number of Points with Cost
 
 [LeetCode][leetcode][^1]'s daily challenge[^2] for the 17th of August 2024 was a
 fun little problem whose solution is interesting enough to provide a dedicated
 writeup.
 
-The problem is named [Maximum Number of Points with Cost][leetcode-1937], has an
-attributed difficulty of medium and is tagged with the `Array` and `Dynamic
-Programming` topics, which give the user some spoilers about the intended
-solution.
-
-In the problem, we are given an $$M \times N$$ integer matrix named $$points$$
-from which we want to maximize the number of points we can get from. To gain
-points from a matrix, we must pick exactly one cell in each row. By picking the
-cell with coordinates $$(r, c)$$ we add $$points[r][c]$$ to the score. There is,
+The problem is named [Maximum Number of Points with Cost][leetcode-1937]. In the
+problem, we are given an $$M \times N$$ integer matrix named $$points$$ from
+which we want to maximize the number of points we can get from. To gain points
+from a matrix, we must pick exactly one cell in each row. By picking the cell
+with coordinates $$(r, c)$$ we add $$points[r][c]$$ to the score. There is,
 however, a caveat that prevents us from being greedy and always choosing the
 cell with most points from each row: for every two adjacent rows $$r$$ and $$r +
 1$$, picking cells at coordinates $$(r, c_1)$$ and $$(r + 1, c_2)$$ will
@@ -32,15 +30,15 @@ being the number of columns:
 - $$0 \leq points[r][c] \leq 10^5$$.
 
 We can take a look at some example inputs to better understand how we can get
-points from a matrix.
+points from a matrix:
 
-<img class="center-image" src="/img/matrix1.svg" width="200rem">
+<img class="center-image" src="/img/36/matrix1.svg" width="200rem">
 
 Using the above matrix as input, the maximum number of points we can achieve is
 obtained from selecting the maximum value from each row, for a total of $$3 -
 1 + 5 - 1 + 3 = 9$$ points.
 
-<img class="center-image" src="/img/matrix2.svg" width="200rem">
+<img class="center-image" src="/img/36/matrix2.svg" width="200rem">
 
 Using the above matrix as input, it is preferable to not select the maximum
 value from the first row, because we would be penalized by $$2$$ if we were to
@@ -49,13 +47,16 @@ column, we get a total of $$5 + 5 + 5 = 15$$ points. If we were to change the
 selected cell from the first row from the 5 to the 6, we would get a total of
 $$6 - 2 + 5 + 5 = 14$$ points.
 
+There are various ways to approach this problem. We are going to take a look at
+some of them, even those that won't work given the problem constraints.
+
 ## Brute Force
 
 A possible brute force solution involves checking every possible combination of
 selections for each row. Since we have $$N$$ options per row and $$M$$ rows, a
 brute force approach would lead to a time complexity of $$\mathcal{O}(N^M)$$.
 Even though it is not a practical approach given the problem constraints, let's
-see how a brute force solution would look like.
+see how a brute force solution would look like:
 
 {% highlight cpp %}
 #include <algorithm>
@@ -97,7 +98,7 @@ current column and points gathered so far. We produce new search states by
 checking how many points we would get for every cell in the next row. Once we
 reach the bottom row we don't expand our search state further and update our
 current best score accordingly. As expected by the problem constraints, the
-above code is going to either exceed the time or memory limits of the online
+above code is going to exceed the time (and likely memory) limit of the online
 judge.
 
 ## Brute Force with Cuts
@@ -154,15 +155,15 @@ accepted.
 
 ## Dynamic Programming
 
-The problem topics hinted at dynamic programming and, in fact, there are some
-observations we can make in order to base our solution in terms of smaller
-subproblems.
+There are some observations we can make in order to base our solution in terms
+of smaller subproblems. To compute the maximum number of points for a given cell
+of a row $$r$$ we only need the maximum number of points we can obtain from each
+cell in row $$r - 1$$. 
 
-One observation we can make is that to compute the maximum number of points for
-a given cell of a row $$r$$ we only need the maximum number of points we can
-obtain from each cell in row $$r - 1$$. If $$f(r, c)$$ is the maximum number of
-points we can get at cell $$(r, c)$$ then we can arrive at the following
-recurrence based on this idea:
+<img class="center-image" src="/img/36/dp.svg" width="600rem">
+
+If $$f(r, c)$$ is the maximum number of points we can get at cell $$(r, c)$$
+then we can arrive at the following recurrence based on this idea:
 
 $$
 f(r, c) = \left\{

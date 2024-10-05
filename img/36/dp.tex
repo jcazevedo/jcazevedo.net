@@ -1,0 +1,71 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{xcolor}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\definecolor{siteblue}{HTML}{268BD2}
+
+\tikzset{
+  table/.style={
+    matrix of nodes,
+    row sep=-\pgflinewidth,
+    column sep=-\pgflinewidth,
+    nodes={
+      rectangle,
+      draw=black,
+      align=center
+    },
+    minimum height=1.5em,
+    text depth=0.5ex,
+    text height=2ex,
+    text width=2ex,
+    nodes in empty cells
+  },
+  blue/.style={
+    fill=siteblue
+  }
+}
+
+\begin{tikzpicture}
+
+  \draw node (leftpos) at (0, 0) {};
+
+  \draw node[right=0em of leftpos] (1) {points:};
+
+  \draw node[right=8em of leftpos] (rightpos) {};
+
+  \draw node[right=0em of rightpos] (2) {dp matrix:};
+
+  \matrix (3) [below right=0.5em and 2em of leftpos,table]
+          {
+            5 & 1 & 6 \\
+            5 & 1 & 1 \\
+            5 & 1 & 1 \\
+          };
+
+  \matrix (4) [below right=0.5em and 2em of rightpos, table]
+          {
+            |[blue]| 5 & |[blue]| 1 & |[blue]| 6 \\
+            & & \\
+            & & \\
+          };
+
+  \matrix (5) [below=0.5em of 4, table]
+          {
+            5 & 1 & 6 \\
+            |[blue]| 10 & |[blue]| 6 & |[blue]| 7 \\
+            & & \\
+          };
+
+  \matrix (6) [below=0.5em of 5, table]
+          {
+            5 & 1 & 6 \\
+            10 & 6 & 7 \\
+            |[blue]| 15 & |[blue]| 10 & |[blue]| 9 \\
+          };
+
+\end{tikzpicture}
+
+\end{document}
