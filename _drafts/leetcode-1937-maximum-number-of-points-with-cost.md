@@ -102,7 +102,7 @@ current best score accordingly. As expected by the problem constraints, the
 above code is going to exceed the time (and likely memory) limit of the online
 judge.
 
-## Brute Force with Cuts
+### Brute Force with Cuts
 
 Building on the brute force approach above, we can avoid complete search paths
 if we don't explore search states that have less points than the maximum we have
@@ -329,7 +329,7 @@ class Solution {
 The above solution has time complexity $$\mathcal{O}(M \times 3 \times N)$$
 which simplifies to $$\mathcal{O}(M \times N)$$ and is good to get accepted.
 
-## Reducing the Space Complexity
+### Reducing the Space Complexity
 
 Even though the solution described above has a sufficient time complexity to be
 accepted, we can reduce its space complexity with the following three
