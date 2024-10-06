@@ -10,9 +10,11 @@ title: Posts
   {% unless post.next %}
   <h2>{{ post.date | date: '%B %Y' }}</h2>
   {% else %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
   {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
   {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
-  {% if month != nmonth %}
+  {% if month != nmonth or year != nyear %}
   <h2>{{ post.date | date: '%B %Y' }}</h2>
   {% endif %}
   {% endunless %}
