@@ -48,7 +48,8 @@ selected cell from the first row from the 5 to the 6, we would get a total of
 $$6 - 2 + 5 + 5 = 14$$ points.
 
 There are various ways to approach this problem. We are going to take a look at
-some of them, even those that won't work given the problem constraints.
+some of them, even those that won't lead to accepted solutions given the problem
+constraints.
 
 ## Brute Force
 
@@ -158,18 +159,33 @@ accepted.
 There are some observations we can make in order to base our solution in terms
 of smaller subproblems. To compute the maximum number of points for a given cell
 of a row $$r$$ we only need the maximum number of points we can obtain from each
-cell in row $$r - 1$$. 
+cell in row $$r - 1$$.
 
-<img class="center-image" src="/img/36/dp.svg" width="600rem">
+To illustrate this idea, let's consider the following matrix:
 
-If $$f(r, c)$$ is the maximum number of points we can get at cell $$(r, c)$$
-then we can arrive at the following recurrence based on this idea:
+<img class="center-image" src="/img/36/matrix3.svg" width="200rem">
+
+Let's go row by row and fill each cell with the maximum points we could get by
+picking it at that point:
+
+<img class="center-image" src="/img/36/matrix4.svg" width="200rem">
+
+Looking at the above, we can make some observations:
+
+* The first row is equal to the first row of $$points$$.
+* On each subsequent row $$r$$, we only need the values from row $$r - 1$$ to
+  compute the best we can get for each cell. For example, at the second row, we
+  chose $$10$$ for its maximum value since it's the value we get from $$5 +
+  \max(5 + 0, 1 - 1, 6 - 2)$$.
+
+More formally, if $$f(r, c)$$ is the maximum number of points we can get at cell
+$$(r, c)$$ then we can arrive at the following recurrence based on this idea:
 
 $$
 f(r, c) = \left\{
   \begin{array}{ll}
       points[r][c], & \mbox{if $r = 0$}.\\
-      \smash{\displaystyle\max_{0 \leq c_{prev} < N}} (f(r - 1, c_{prev}) - \operatorname{abs}(c - c_{prev}) + points[r][c]), & \mbox{otherwise}.
+      \smash{points[r][c] + \displaystyle\max_{0 \leq c_{prev} < N}} (f(r - 1, c_{prev}) - \operatorname{abs}(c - c_{prev})), & \mbox{otherwise}.
   \end{array}
 \right.
 $$
@@ -197,8 +213,8 @@ class Solution {
     for (int c = 0; c < N; ++c) { dp[0][c] = points[0][c]; }
     for (int r = 1; r < M; ++r) {
       for (int c = 0; c < N; ++c) {
-        for (int cp = 0; cp < N; ++cp) { 
-          dp[r][c] = max(dp[r][c], dp[r - 1][cp] - abs(c - cp) + points[r][c]); 
+        for (int cp = 0; cp < N; ++cp) {
+          dp[r][c] = max(dp[r][c], dp[r - 1][cp] - abs(c - cp) + points[r][c]);
         }
       }
     }
@@ -216,20 +232,19 @@ In order to improve the time complexity, let's focus on what we are doing to
 compute $$f(r, c)$$ for $$r \neq 0$$:
 
 $$
-\smash{\displaystyle\max_{0 \leq c_{prev} < N}} (f(r - 1, c_{prev}) - \operatorname{abs}(c - c_{prev}) + points[r][c])
+\smash{points[r][c] + \displaystyle\max_{0 \leq c_{prev} < N}} (f(r - 1, c_{prev}) - \operatorname{abs}(c - c_{prev}))
 $$
 
-$$points[r][c]$$ is always the same value regardless of the $$c_{prev}$$ we
-choose. Can we avoid iterating through all possible values of $$c_{prev}$$ for
-every $$(r, c)$$ pair? If we could produce a function $$g(r, c)$$ that would
-give us the best selection from the previous row for a given $$c$$ column we
-could rewrite our recurrence as:
+Can we avoid iterating through all possible values of $$c_{prev}$$ for every
+$$(r, c)$$ pair? If we could produce a function $$g(r, c)$$ that would give us
+the best selection from the previous row for a given $$c$$ column we could
+rewrite our recurrence as:
 
 $$
 f(r, c) = \left\{
   \begin{array}{ll}
       points[r][c], & \mbox{if $r = 0$}.\\
-      g(r - 1, c) + points[r][c], & \mbox{otherwise}.
+      points[r][c] + g(r - 1, c), & \mbox{otherwise}.
   \end{array}
 \right.
 $$
@@ -249,10 +264,10 @@ As such, if we look at the $$\operatorname{left}$$ function, we can conclude
 that $$\operatorname{left}(r, 0) = f(r, 0)$$, because we can't go any left, so
 the best we can get at column $$0$$ is the maximum so far for cell $$(r, 0)$$.
 For $$\operatorname{left}(r, 1)$$ we can pick the maximum of either $$f(r, 1)$$
-or $$\operatorname{left}(r, 0) - 1$$. In other words, we either pick the best
-value for the current cell or we pick the best value we have to our left and
-subtract $$1$$ (which is the penalty of moving right). We can generalize
-$$\operatorname{left}$$ as follows:
+or $$\operatorname{left}(r, 0) - 1$$. In other words, we either pick the value
+we get from choosing the current cell or we pick the best value we have to our
+left and subtract $$1$$ (which is the penalty of moving right). We can
+generalize $$\operatorname{left}$$ as follows:
 
 $$
 \operatorname{left}(r, c) = \left\{
@@ -324,7 +339,7 @@ observations:
    $$\operatorname{right}$$ functions (which we saw previously that can be
    combined into one lookup vector), so we can reuse the vector of the maximum
    values for the previous row (the lookup for our $$f$$ function) for that.
-   
+
 If we put those ideas into practice we arrive at the following solution, which
 still has a time complexity of $$\mathcal{O}(M \times N)$$ but an extra space
 complexity of just $$\mathcal{O}(N)$$, which is better than the previous

@@ -1,0 +1,36 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{xcolor}
+\usetikzlibrary{matrix}
+
+\begin{document}
+
+\tikzset{
+  table/.style={
+    matrix of nodes,
+    row sep=-\pgflinewidth,
+    column sep=-\pgflinewidth,
+    nodes={
+      rectangle,
+      draw=black,
+      align=center
+    },
+    minimum height=1.5em,
+    text depth=0.5ex,
+    text height=2ex,
+    text width=2ex,
+    nodes in empty cells
+  }
+}
+
+\begin{tikzpicture}
+
+  \matrix (first) [table]
+          {
+            5 & 1 & 6 \\
+            5 & 1 & 1 \\
+            5 & 1 & 1 \\
+          };
+
+\end{tikzpicture}
+
+\end{document}
