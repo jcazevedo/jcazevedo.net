@@ -7,7 +7,7 @@ index: 36
 
 [LeetCode][leetcode][^1]'s daily challenge[^2] for the 17th of August 2024 was a
 fun little problem whose solution is interesting enough to provide a dedicated
-writeup.
+write-up.
 
 The problem is named [Maximum Number of Points with Cost][leetcode-1937]. In the
 problem, we are given an $$M \times N$$ integer matrix named $$points$$ from
@@ -41,11 +41,11 @@ obtained from selecting the maximum value from each row, for a total of $$3 -
 <img class="center-image" src="/img/36/matrix2.svg" width="200rem">
 
 Using the above matrix as input, it is preferable to not select the maximum
-value from the first row, because we would be penalized by $$2$$ if we were to
-select the $$5$$ from the second row. Since all selected cells lie in the same
-column, we get a total of $$5 + 5 + 5 = 15$$ points. If we were to change the
-selected cell from the first row from the 5 to the 6, we would get a total of
-$$6 - 2 + 5 + 5 = 14$$ points.
+value from the first row (the $$6$$), because we would be penalized by $$2$$ if
+we were to select the $$5$$ from the second row. Since all selected cells lie in
+the same column, we get a total of $$5 + 5 + 5 = 15$$ points. If we were to
+change the selected cell from the first row from the 5 to the 6, we would get a
+total of $$6 - 2 + 5 + 5 = 14$$ points.
 
 There are various ways to approach this problem. We are going to take a look at
 some of them, even those that won't lead to accepted solutions given the problem
@@ -53,7 +53,7 @@ constraints.
 
 ## Brute Force
 
-A possible brute force solution involves checking every possible combination of
+A potential brute force solution involves checking every possible combination of
 selections for each row. Since we have $$N$$ options per row and $$M$$ rows, a
 brute force approach would lead to a time complexity of $$\mathcal{O}(N^M)$$.
 Even though it is not a practical approach given the problem constraints, let's
@@ -155,6 +155,12 @@ avoids entire search paths for some inputs. It is still not good enough to be
 accepted.
 
 ## Dynamic Programming
+
+Given that $$M \times N$$ is at most $$10^5$$, a $$\mathcal{O}(M \times N)$$
+solution or even a $$\mathcal{O}(M \times N \times \log(N))$$ or $$\mathcal{O}(M
+\times N \times \log(M))$$ solution would work, but anything assymptotically
+larger would be challenging. Let's see if there's an opportunity to reuse
+previous computations when building our solution.
 
 There are some observations we can make in order to base our solution in terms
 of smaller subproblems. To compute the maximum number of points for a given cell
