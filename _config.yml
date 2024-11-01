@@ -2,7 +2,7 @@ highlighter: rouge
 markdown: kramdown
 permalink: pretty
 paginate: 5
-paginate_path: "posts/:num"
+paginate_path: ":num"
 excerpt_separator: ""
 timezone: UTC
 plugins:
@@ -21,4 +21,4 @@ exclude:
   - README.md
 collections:
   posts:
-    permalink: /posts/:year/:month/:day/:title:output_ext
+    permalink: /:year/:month/:day/:title:output_ext

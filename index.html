@@ -3,14 +3,29 @@ layout: main
 title: Home
 ---
 
-<h1>Introduction</h1>
+{% for post in paginator.posts %}
+<div class="post">
+  <h1 class="post-title">{{ post.title }}</h1>
+  <span class="post-extra-header">{{ post.date | date: "%B %-d, %Y" }} <a href="{{ site.url }}{{ post.url }}">&#x221e;</a></span>
 
-<p>
-  Hi! I'm Joao Azevedo and I like programming. I'm currently a Software Engineer at <a href="https://www.kevel.com/">Kevel</a>. You can read more <a href="/about">about</a> me, check some <a href="/posts">posts</a> I wrote, or some of the <a href="/projects">projects</a> I work on.
-</p>
-
-<h2>Latest posts (<a href="/posts">all</a>)</h2>
-
-{% for post in site.posts limit: 5 %}
-{% include post_link.html post=post %}
+  {{ post.content }}
+</div>
 {% endfor %}
+
+<div class="pagination">
+  {% if paginator.next_page %}
+  <a class="pagination-item older" href="/{{paginator.next_page}}">&laquo; Older</a>
+  {% else %}
+  <span class="pagination-item older">&laquo; Older</span>
+  {% endif %}
+  <a class="pagination-item archive" href="/posts">All</a>
+  {% if paginator.previous_page %}
+  {% if paginator.page == 2 %}
+  <a class="pagination-item newer" href="/">Newer &raquo;</a>
+  {% else %}
+  <a class="pagination-item newer" href="/{{paginator.previous_page}}">Newer &raquo;</a>
+  {% endif %}
+  {% else %}
+  <span class="pagination-item newer">Newer &raquo;</span>
+  {% endif %}
+</div>
