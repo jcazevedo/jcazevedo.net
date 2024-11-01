@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "Wed Sep  9 10:55:45 WEST 2020"
-index: 15
+num: 15
 ---
 
 # September LeetCoding Challenge, Day 8: Sum of Root To Leaf Binary Numbers

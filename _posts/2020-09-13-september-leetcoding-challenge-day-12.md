@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "Sun Sep 13 18:16:32 WEST 2020"
-index: 19
+num: 19
 ---
 
 # September LeetCoding Challenge, Day 12: Combination Sum III

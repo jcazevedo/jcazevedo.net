@@ -2,13 +2,13 @@
 layout: post
 title: 'Book Review: Scala with Cats'
 date: 2023-10-02 23:37 +0000
-index: 35
+num: 35
 categories:
 - book-reviews
 - scala-with-cats
 ---
 
-<img src="/img/scala-with-cats.jpg" class="right-image scaled" />
+<img src="/img/35/scala-with-cats.jpg" class="right-image scaled" />
 
 [Scala with Cats][scala-with-cats] is a book about the [Cats][cats] library,
 which provides abstractions for functional programming in the [Scala][scala]

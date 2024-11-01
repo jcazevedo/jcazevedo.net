@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "Sun Sep  6 11:47:06 WEST 2020"
-index: 12
+num: 12
 ---
 
 # September LeetCoding Challenge, Day 5: All Elements in Two Binary Search Trees

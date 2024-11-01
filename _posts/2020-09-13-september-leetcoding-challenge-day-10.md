@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "Sun Sep 13 18:14:51 WEST 2020"
-index: 17
+num: 17
 ---
 
 # September LeetCoding Challenge, Day 10: Bulls and Cows

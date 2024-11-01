@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "Wed Aug  9 01:14:39 WEST 2017"
-index: 7
+num: 7
 ---
 
 # An Inside Look into the Loot Train Attack Scene

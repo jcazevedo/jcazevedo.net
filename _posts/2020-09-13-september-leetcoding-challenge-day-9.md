@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "Sun Sep 13 18:13:53 WEST 2020"
-index: 16
+num: 16
 ---
 
 # September LeetCoding Challenge, Day 9: Compare Version Numbers

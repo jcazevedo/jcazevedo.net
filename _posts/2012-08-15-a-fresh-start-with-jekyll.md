@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "Wed Aug  15 22:15:10 WET 2012"
-index: 1
+num: 1
 ---
 
 # A Fresh Start with Jekyll
