@@ -1,6 +1,7 @@
 ---
 layout: post
 num: 36
+date: 2024-11-01 20:58 +0000
 ---
 
 # LeetCode 1937: Maximum Number of Points with Cost
