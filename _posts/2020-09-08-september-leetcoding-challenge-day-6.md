@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Tue Sep  8 00:19:42 WEST 2020"
-num: 13
 ---
 
 # September LeetCoding Challenge, Day 6: Image Overlap

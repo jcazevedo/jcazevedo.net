@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Tue Sep  8 11:09:18 WEST 2020"
-num: 14
 ---
 
 # September LeetCoding Challenge, Day 7: Word Pattern

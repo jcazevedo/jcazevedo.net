@@ -1,7 +1,6 @@
 ---
 layout: post
 date: 2023-01-14 18:03 +0000
-num: 23
 ---
 
 # Using GitHub Packages for Scala

@@ -2,7 +2,6 @@
 layout: post
 title: Migrating This Website to AWS
 date: 2022-09-08 00:47 +0100
-num: 21
 categories:
   - infrastructure
 ---

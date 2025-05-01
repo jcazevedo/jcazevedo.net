@@ -1,12 +1,11 @@
 ---
 layout: post
-num: 36
 date: 2024-11-01 20:58 +0000
 ---
 
 # LeetCode 1937: Maximum Number of Points with Cost
 
-[LeetCode][leetcode][^36-1]'s daily challenge[^36-2] for the 17th of August 2024
+[LeetCode][leetcode][^1]'s daily challenge[^2] for the 17th of August 2024
 was a fun little problem whose solution is interesting enough to provide a
 dedicated write-up.
 
@@ -33,13 +32,13 @@ being the number of columns:
 We can take a look at some example inputs to better understand how we can get
 points from a matrix:
 
-{% include image.html url="/img/36/matrix1.svg" class="center-image" width="200rem" description="Sample matrix with the cells that maximize the score highlighted." %}
+{% include image.html url="/img/matrix1.svg" class="center-image" width="200rem" description="Sample matrix with the cells that maximize the score highlighted." %}
 
 Using the above matrix as input, the maximum number of points we can achieve is
 obtained from selecting the maximum value from each row, for a total of $$3 -
 1 + 5 - 1 + 3 = 9$$ points.
 
-{% include image.html url="/img/36/matrix2.svg" class="center-image" width="200rem" description="Sample matrix with the cells that maximize the score highlighted." %}
+{% include image.html url="/img/matrix2.svg" class="center-image" width="200rem" description="Sample matrix with the cells that maximize the score highlighted." %}
 
 Using the above matrix as input, it is preferable to not select the maximum
 value from the first row (the $$6$$), because we would be penalized by $$2$$ if
@@ -94,7 +93,7 @@ class Solution {
 };
 {% endhighlight %}
 
-On the C++ sample code above, we're doing a breadth-first search[^36-3] over the
+On the C++ sample code above, we're doing a breadth-first search[^3] over the
 state of possible solutions. Each search state is comprised of the current row,
 current column and points gathered so far. We produce new search states by
 checking how many points we would get for every cell in the next row. Once we
@@ -170,12 +169,12 @@ cell in row $$r - 1$$.
 
 To illustrate this idea, let's consider the following matrix:
 
-{% include image.html url="/img/36/matrix3.svg" class="center-image" width="200rem" description="Sample matrix with no cells selected." %}
+{% include image.html url="/img/matrix3.svg" class="center-image" width="200rem" description="Sample matrix with no cells selected." %}
 
 Let's go row by row and fill each cell with the maximum points we could get by
 picking it at that point:
 
-{% include image.html url="/img/36/matrix4.svg" class="center-image"
+{% include image.html url="/img/matrix4.svg" class="center-image"
 width="200rem" description="Building a matrix in which each cell corresponds to
 the maximum score we can achieve from a path ending at that point." %}
 
@@ -378,16 +377,16 @@ class Solution {
 };
 {% endhighlight %}
 
-[^36-1]: LeetCode is an online platform providing practice coding and
+[^1]: LeetCode is an online platform providing practice coding and
     algorithmic problems.
 
-[^36-2]: LeetCode's daily challenges are problems from LeetCode's database that
+[^2]: LeetCode's daily challenges are problems from LeetCode's database that
     are meant to be solved on each day of the year. Solving them provides some
     extra rewards in terms of LeetCoins and can get you a badge if you solve all
     problems of a given calendar month. I have been solving them for fun and
     trying to keep a streak going.
 
-[^36-3]: We can change the queue into a stack for a depth-first search.
+[^3]: We can change the queue into a stack for a depth-first search.
 
 [leetcode]: https://leetcode.com/
 [leetcode-1937]: https://leetcode.com/problems/maximum-number-of-points-with-cost/

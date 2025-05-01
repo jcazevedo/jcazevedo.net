@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Tue Oct  28 20:41:33 WET 2014"
-num: 3
 ---
 
 # A Beets Plugin for Rateyourmusic
@@ -35,7 +34,7 @@ last.fm tags as genres:
 Taking that into account, I decided to write a plugin to fetch genre information
 from Rateyourmusic and assign it to albums and items in the beets library:
 [beets-rymgenre][beets-rymgenre]. Rateyourmusic doesn't provide a webservice or
-API for developers to build upon[^3-1] so it's necessary to scrape for the
+API for developers to build upon[^1] so it's necessary to scrape for the
 desired information. Beets is written in Python, and so are its plugins. I have
 little experience with it and no familiarity with its ecosystem. I ended up
 using [lxml][lxml] for scraping and [requests][requests] for the HTTP client,
@@ -47,7 +46,7 @@ library metadata is that now I can ask beets for random albums of a given genre
 (or set of genres, for that matter) whenever I'm not sure what to listen to
 next.
 
-[^3-1]: There's actually an [open ticket][api-ticket] to build a webservice /
+[^1]: There's actually an [open ticket][api-ticket] to build a webservice /
     API for Rateyourmusic open since 2009!
 
 [api-ticket]: http://rateyourmusic.com/rymzilla/view?id=683

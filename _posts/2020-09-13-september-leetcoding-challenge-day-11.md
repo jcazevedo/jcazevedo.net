@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Sun Sep 13 18:15:40 WEST 2020"
-num: 18
 ---
 
 # September LeetCoding Challenge, Day 11: Maximum Product Subarray

@@ -2,7 +2,6 @@
 layout: post
 title: 'Solutions to Scala with Cats: Chapter 8'
 date: 2023-04-07 13:51 +0000
-num: 31
 categories:
   - book-solutions
   - scala-with-cats

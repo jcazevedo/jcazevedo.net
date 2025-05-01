@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Fri Sep  4 11:38:52 WEST 2020"
-num: 10
 ---
 
 # September LeetCoding Challenge, Day 3: Repeated Substring Pattern

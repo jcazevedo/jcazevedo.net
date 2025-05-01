@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Mon Dec  7 16:40:38 WET 2020"
-num: 20
 ---
 
 # September LeetCoding Challenge, Day 13: Insert Interval

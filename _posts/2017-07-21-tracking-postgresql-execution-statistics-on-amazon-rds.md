@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Fri Jul 21 02:20:15 WEST 2017"
-num: 5
 ---
 
 # Tracking PostgreSQL Execution Statistics on Amazon RDS

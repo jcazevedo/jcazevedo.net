@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Wed Dec  9 23:41:22 WET 2015"
-num: 4
 ---
 
 # Advent of Code
@@ -16,7 +15,7 @@ unlikely. The puzzles so far have been simple, either by definition, or by
 having small input sizes, thus not requiring efficient algorithms to be solved.
 The tree lights up as you go along, giving it a nice effect:
 
-{% include image.html url="/img/4/adventofcodetree.png" description="Advent of
+{% include image.html url="/img/adventofcodetree.png" description="Advent of
    Code tree with 9 levels lit up." %}
 
 I've decided to solve them all in Scala. Initially I started in C++, but in

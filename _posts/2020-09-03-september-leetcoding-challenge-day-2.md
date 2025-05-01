@@ -1,7 +1,6 @@
 ---
 layout: post
 date: "Thu Sep  3 11:18:01 WEST 2020"
-num: 9
 ---
 
 # September LeetCoding Challenge, Day 2: Contains Duplicate III
