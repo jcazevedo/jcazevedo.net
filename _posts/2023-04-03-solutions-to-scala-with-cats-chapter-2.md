@@ -79,10 +79,13 @@ object BooleanMonoidProperties extends App {
       a <- BooleanValues
       b <- BooleanValues
       c <- BooleanValues
-    } yield monoid.combine(monoid.combine(a, b), c) == monoid.combine(a, monoid.combine(b, c))).forall(identity)
+    } yield monoid.combine(monoid.combine(a, b), c) == 
+            monoid.combine(a, monoid.combine(b, c)))
+      .forall(identity)
 
   def checkIdentityElement(monoid: Monoid[Boolean]): Boolean =
-    (for { a <- BooleanValues } yield monoid.combine(a, monoid.empty) == a).forall(identity)
+    (for { a <- BooleanValues } yield 
+     monoid.combine(a, monoid.empty) == a).forall(identity)
 
   def checkMonoidLaws(monoid: Monoid[Boolean]): Boolean =
     checkAssociativity(monoid) && checkIdentityElement(monoid)

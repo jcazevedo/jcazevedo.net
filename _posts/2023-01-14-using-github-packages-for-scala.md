@@ -51,7 +51,8 @@ means that, in sbt, we can define the location of our repository by setting the
 
 {% highlight scala %}
 publishTo := Some(
-  "GitHub Package Registry (<project>)" at "https://maven.pkg.github.com/<org>/<project>"
+  "GitHub Package Registry (<project>)" at
+  "https://maven.pkg.github.com/<org>/<project>"
 )
 {% endhighlight %}
 
@@ -71,7 +72,8 @@ purpose, we can set up the same location we mentioned previously when publishing
 artifacts:
 
 {% highlight scala %}
-resolvers += ("GitHub Package Registry" at "https://maven.pkg.github.com/<org>/<project>")
+resolvers +=
+  ("GitHub Package Registry" at "https://maven.pkg.github.com/<org>/<project>")
 {% endhighlight %}
 
 And then add the project as a regular library dependency:
@@ -116,7 +118,8 @@ purpose, we can set up something like the following in our sbt build:
 credentials ++= {
   val githubToken = System.getenv("GITHUB_TOKEN")
   if (githubToken == null) Seq.empty
-  else Seq(Credentials("GitHub Package Registry", "maven.pkg.github.com", "_", githubToken))
+  else Seq(Credentials("GitHub Package Registry", "maven.pkg.github.com", "_",
+                       githubToken))
 }
 {% endhighlight %}
 

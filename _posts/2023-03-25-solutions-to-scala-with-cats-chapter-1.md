@@ -39,9 +39,10 @@ scalaVersion := "2.13.8"
 
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.8.0"
 
-// scalac options come from the sbt-tpolecat plugin so need to set any here
+// scalac options come from the sbt-tpolecat plugin so no need to set any here
 
-addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.13.2" cross CrossVersion.full)
+addCompilerPlugin(
+  "org.typelevel" %% "kind-projector" % "0.13.2" cross CrossVersion.full)
 {% endhighlight %}
 
 The above differs a bit from what the book lists, since there are both new Scala
@@ -213,7 +214,9 @@ object Cat {
       val intEq = Eq[Int]
 
       def eqv(x: Cat, y: Cat): Boolean =
-        stringEq.eqv(x.name, y.name) && intEq.eqv(x.age, y.age) && stringEq.eqv(x.color, y.color)
+        stringEq.eqv(x.name, y.name) &&
+        intEq.eqv(x.age, y.age) &&
+        stringEq.eqv(x.color, y.color)
     }
 }
 {% endhighlight %}

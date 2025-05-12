@@ -79,7 +79,8 @@ import cats.syntax.foldable._
 import cats.syntax.semigroup._
 
 final case class GCounter[A](counters: Map[String, A]) {
-  def increment(machine: String, amount: A)(implicit m: CommutativeMonoid[A]): GCounter[A] =
+  def increment(machine: String, amount: A)(
+      implicit m: CommutativeMonoid[A]): GCounter[A] =
     GCounter(counters |+| Map(machine -> amount))
 
   def merge(that: GCounter[A])(implicit b: BoundedSemiLattice[A]): GCounter[A] =
@@ -109,10 +110,12 @@ trait GCounter[F[_, _], K, V] {
 object GCounter {
   implicit def mapInstance[K, V]: GCounter[Map, K, V] =
     new GCounter[Map, K, V] {
-      def increment(f: Map[K, V])(k: K, v: V)(implicit m: CommutativeMonoid[V]): Map[K, V] =
+      def increment(f: Map[K, V])(k: K, v: V)(
+         implicit m: CommutativeMonoid[V]): Map[K, V] =
         f |+| Map(k -> v)
 
-      def merge(f1: Map[K, V], f2: Map[K, V])(implicit b: BoundedSemiLattice[V]): Map[K, V] =
+      def merge(f1: Map[K, V], f2: Map[K, V])(
+         implicit b: BoundedSemiLattice[V]): Map[K, V] =
         f1 |+| f2
 
       def total(f: Map[K, V])(implicit m: CommutativeMonoid[V]): V =

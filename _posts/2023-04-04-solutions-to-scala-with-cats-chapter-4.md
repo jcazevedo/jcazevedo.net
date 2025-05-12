@@ -79,8 +79,11 @@ A possible implementation for `validateAdult` is the following:
 import cats.{Applicative, MonadError}
 
 def validateAdult[F[_]](age: Int)(implicit me: MonadError[F, Throwable]): F[Int] =
-  if (age >= 18) Applicative[F].pure(age)
-  else me.raiseError(new IllegalArgumentException("Age must be greater than or equal to 18"))
+  if (age >= 18)
+    Applicative[F].pure(age)
+  else
+    me.raiseError(
+      new IllegalArgumentException("Age must be greater than or equal to 18"))
 }
 {% endhighlight %}
 
@@ -144,8 +147,10 @@ Await.result(Future.sequence(Vector(
   Future(factorial(5))
 )).map(_.map(_.written)), 5.seconds)
 // Returns Vector(
-//   Vector("fact 0 1", "fact 1 1", "fact 2 2", "fact 3 6", "fact 4 24", "fact 5 120"),
-//   Vector("fact 0 1", "fact 1 1", "fact 2 2", "fact 3 6", "fact 4 24", "fact 5 120")
+//   Vector("fact 0 1", "fact 1 1", "fact 2 2", "fact 3 6", "fact 4 24",
+//          "fact 5 120"),
+//   Vector("fact 0 1", "fact 1 1", "fact 2 2", "fact 3 6", "fact 4 24",
+//          "fact 5 120")
 // )
 {% endhighlight %}
 
@@ -177,7 +182,8 @@ The `checkLogin` method can be implemented as follows:
 def checkLogin(userId: Int, password: String): DbReader[Boolean] =
   for {
     usernameOpt <- findUsername(userId)
-    validLogin <- usernameOpt.map(checkPassword(_, password)).getOrElse(Reader.apply((_: Db) => false))
+    validLogin <- usernameOpt.map(checkPassword(_, password)).getOrElse(
+                    Reader.apply((_: Db) => false))
   } yield validLogin
 {% endhighlight %}
 
