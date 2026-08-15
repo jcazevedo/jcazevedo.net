@@ -155,4 +155,4 @@ DEPENDENCIES
   rake (~> 13)
 
 BUNDLED WITH
-   2.4.9
+  4.0.18
