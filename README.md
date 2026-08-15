@@ -42,8 +42,39 @@ To run the build and HTML checks:
 bundle exec rake test
 ```
 
+### Authoring posts
+
+The [Jekyll::Compose][jekyll-compose] gem can be used to streamline some
+writing, avoiding the need for moving files between `_drafts/` and `_posts/`
+manually.
+
+To create a draft:
+
+```sh
+bundle exec jekyll draft "My New Post"
+```
+
+The command creates a file in `_drafts/` with the appropriate front matter. Keep
+`layout: post` and add or update the title before writing the post.
+
+To rename a draft:
+
+```sh
+bundle exec jekyll rename _drafts/my-new-post.md "My Renamed Post"
+```
+
+Preview drafts locally with `bundle exec jekyll serve --drafts`. When a draft is
+ready, publish it with:
+
+```sh
+bundle exec jekyll publish _drafts/my-renamed-post.md
+```
+
+Jekyll::Compose moves the file into `_posts/` and assigns its publication date.
+
 [bundler]: https://bundler.io/
 [cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 [hyde]: http://github.com/poole/hyde
 [jekyll]: https://jekyllrb.com/
+[jekyll-compose]: https://github.com/jekyll/jekyll-compose
 [rubygems]: https://rubygems.org/
