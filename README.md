@@ -2,7 +2,7 @@
 
 This is the data that powers http://jcazevedo.net/. It is automatically
 transformed into a static website using [Jekyll][jekyll]. See
-[Developing][#developing] for more details.
+[Developing](#developing) for more details.
 
 Content is available under [Creative Commons (BY-NC-SA)][cc-by-nc-sa] unless
 otherwise noted. The CSS is heavily reused from [Hyde][hyde], which is open
