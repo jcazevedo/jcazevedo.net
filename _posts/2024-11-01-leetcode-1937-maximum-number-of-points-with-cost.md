@@ -84,8 +84,7 @@ class Solution {
         ans = max(ans, currPoints);
       } else {
         for (int c = 0; c < N; ++c) {
-          q.push({currRow + 1, c,
-                  currPoints + points[currRow + 1][c] - abs(currCol - c)});
+          q.push({currRow + 1, c, currPoints + points[currRow + 1][c] - abs(currCol - c)});
         }
       }
     }
@@ -138,8 +137,7 @@ class Solution {
         ans = max(ans, currPoints);
       } else {
         for (int c = 0; c < N; ++c) {
-          long long nextPoints = currPoints + points[currRow + 1][c] -
-                                 abs(currCol - c);
+          long long nextPoints = currPoints + points[currRow + 1][c] - abs(currCol - c);
           if (nextPoints > maxSoFar[currRow + 1][c]) {
             maxSoFar[currRow + 1][c] = nextPoints;
             q.push({currRow + 1, c, nextPoints});
@@ -324,8 +322,7 @@ class Solution {
         right[c] = max(right[c + 1] - 1, dp[r - 1][c]);
       }
       for (int c = 0; c < N; ++c) {
-        dp[r][c] = max((long long)points[r - 1][c], max(left[c], right[c])) +
-                   points[r][c];
+        dp[r][c] = max((long long)points[r - 1][c], max(left[c], right[c])) + points[r][c];
       }
     }
     long long ans = 0L;
