@@ -18,7 +18,7 @@ games, but end up playing a lot of different genres. I make an effort to keep as
 much of the code I write [open-source][github].
 
 In case you're interested, you can grab my [CV][cv]. You can contact me through
-[email][email] or [twitter][twitter].
+[email][email].
 
 [cv]: /contents/cv.pdf
 [email]: mailto:joao.c.azevedo@gmail.com
@@ -29,4 +29,3 @@ In case you're interested, you can grab my [CV][cv]. You can contact me through
 [kevel]: https://www.kevel.com/
 [last.fm]: http://www.last.fm/user/jcazevedo
 [steam]: http://steamcommunity.com/id/jcazevedo/
-[twitter]: http://twitter.com/jcazevedo
